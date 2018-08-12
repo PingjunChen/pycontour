@@ -1,12 +1,17 @@
 # pycontour
-Package for the operation of contours, using numpy array as the basic contour representation.
+Contour operation utilities, using numpy array as the fundamental representation.
 
 ## Origin
-Contour is one of the most important concept in plentiful image-based applications.
-There are several packages owning contour operation utilities. OpenCV provides a few contour extraction and attribute (area, et al.) calculation functions. Shapely is mainly designed for geometric object analysis, with specific data structures. Numpy is the fundamental package for scientific computing with Python. We propose this package to use Numpy array as basic contour representation. OpenCV and shapely would be used as internal operations.
-
+Contour is one of the most important concept in plentiful image-based applications, especially in medical imaging field, mainly for region of interest (ROI). OpenCV and shapely both provide a few contour operation support. This package tries to simplify the usage of contour operation, with numpy as the fundamental representation for contour. Required packages can be installed through "pip install requirements.txt".
 
 ## Installation
-* pip install opencv-python
-* pip install shapely
-  
+```
+pip install pycontour
+```
+
+## Main features
+To appear...
+
+
+## Documentation
+To appear...
