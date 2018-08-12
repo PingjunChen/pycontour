@@ -7,7 +7,7 @@ import pycontour
 
 PKG_NAME = "pycontour"
 VERSION = pycontour.__version__
-DESCRIPTION = "contour operation utilities."
+DESCRIPTION = "Contour operation utilities."
 HOMEPAGE = "https://github.com/PingjunChen/pycontour"
 LICENSE = "Apache"
 AUTHOR_NAME = "Pingjun Chen"
