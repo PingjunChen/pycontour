@@ -12,6 +12,7 @@ def configuration(parent_package='', top_path=None):
     config = Configuration(PKG_NAME, parent_package, top_path)
 
     # Add subpackage
+    config.add_subpackage('cnt')
     config.add_subpackage('polygon')
 
     # Add test directories

@@ -5,6 +5,7 @@ import numpy as np
 
 __all__ = ["swap_wh", "np_arr_to_point_list", "point_list_to_np_arr"]
 
+
 def swap_wh(np_arr):
     """Swap row of width and row of height
     """
