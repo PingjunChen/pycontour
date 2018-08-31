@@ -3,3 +3,4 @@
 import os, sys
 
 from .construct_polygon import *
+from .relation import *
