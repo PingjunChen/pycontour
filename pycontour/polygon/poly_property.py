@@ -2,4 +2,5 @@
 
 import os, sys
 
-from .cnt_property import *
+def get_poly_area(poly):
+    pass
