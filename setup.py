@@ -15,7 +15,7 @@ AUTHOR_EMAIL = "chenpingjun@gmx.com"
 
 REQS = ""
 with open('requirements.txt') as f:
-    REQS = [pkg.replace("==", ">=") for pkg in f.read().splitlines()]
+    REQS = [pkg.replace("==", ">=") for pkg in f.read().splitlines() if pkg.contains("==")]
 
 CLASSIFIERS = [
     'Development Status :: 1 - Planning',
