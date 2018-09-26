@@ -3,6 +3,8 @@ Welcome to pycontour's documentation!
 
 The documentation for `pycontour`_ is mainly organized by sub-modules.
 
+.. _pycontour: https://github.com/PingjunChen/pycontour
+
 * :ref:`user-docs`
 * :ref:`about-docs`
 
