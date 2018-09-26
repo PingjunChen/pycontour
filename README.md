@@ -8,8 +8,10 @@ Contour is one of the most important concept in plentiful image-based applicatio
 
 
 ## Installation
-To install pycontour, simple use pip. Required packages can refer requirements.txt.
+To install pycontour, libgeos and shapely need to install in advance. Other required packages can refer requirements.txt.
 ```
+$ sudo apt-get install libgeos-dev
+$ pip install shapely
 $ pip install pycontour
 ```
 
