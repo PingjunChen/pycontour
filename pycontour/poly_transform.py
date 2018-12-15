@@ -13,6 +13,16 @@ __all__ = ["construct_poly_using_np_arr", "construct_poly_using_point_list",
 
 def construct_poly_using_np_arr(np_arr):
     """Using numpy array to construct polygon
+    Parameters
+    ----------
+    np_arr : np.array
+        Numpy array of point set    
+
+    Returns
+    -------
+    poly : Polygon
+        Contour with shapely polygon format    
+
     """
     point_list = np_arr_to_point_list(np_arr)
     poly = Polygon(point_list)
@@ -22,6 +32,16 @@ def construct_poly_using_np_arr(np_arr):
 
 def construct_poly_using_point_list(point_list):
     """Using point list to construct polygon
+    Parameters
+    ----------
+    point_list : list
+        List of point set    
+
+    Returns
+    -------
+    poly : Polygon
+        Contour with shapely polygon format
+
     """
     poly = Polygon(point_list)
 
@@ -30,6 +50,22 @@ def construct_poly_using_point_list(point_list):
 
 def construct_poly_using_bbox(min_w, min_h, max_w, max_h):
     """Using bounding box to construct polygon
+    Parameters
+    ----------
+    min_w : int
+        Minimum x coordinate of polygon
+    min_h : int 
+        Minimum y coordinate of polygon        
+    max_w : int
+        Maximum x coordinate of polygon
+    max_h : int 
+        Maximum y coordinate of polygon  
+
+    Returns
+    -------
+    poly : Polygon
+        Contour with shapely polygon format  
+
     """
     poly = box(min_w, min_h, max_w, max_h)
 
@@ -38,6 +74,15 @@ def construct_poly_using_bbox(min_w, min_h, max_w, max_h):
 
 def poly_to_np_arr(poly):
     """Convert shapely Polygon to normal numpy 2d array [0]-w, [1]-h
+    Parameters
+    ----------
+    poly : Polygon
+        Contour with shapely polygon format  
+
+    Returns
+    -------
+    cnt_arr : np.array
+        Numpy array of point set
     """
     x_coors, y_coors = poly.exterior.coords.xy
     x_coors = x_coors[:-1].tolist()

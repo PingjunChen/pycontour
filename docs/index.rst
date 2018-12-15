@@ -14,10 +14,14 @@ The documentation for `pycontour`_ is mainly organized by sub-modules.
   :maxdepth: 2
   :caption: User Documentation
 
+  transform
+  poly
+  cnt
+
 .. _about-docs:
 
 .. toctree::
  :maxdepth: 2
- :caption: About
+ :caption: About pycontour
 
  about
