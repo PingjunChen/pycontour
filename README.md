@@ -12,10 +12,17 @@ To install pycontour, libgeos and shapely need to install in advance. Other requ
 ```
 $ sudo apt-get install libgeos-dev
 $ pip install shapely
+$ pip install opencv-python
 $ pip install pycontour
 ```
-
 
 ## Documentation
 * Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and
 [Sphinx](http://www.sphinx-doc.org).
+
+
+## License
+[pycontour](https://github.com/PingjunChen/pycontour) is free software made available under the Apache License 2.0. For details see the LICENSE file.
+
+## Contributors
+See the AUTHORS.rst file for a complete list of contributors to the project.
