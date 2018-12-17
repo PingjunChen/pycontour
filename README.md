@@ -22,7 +22,7 @@ $ pip install pycontour
 
 
 ## License
-[pycontour](https://github.com/PingjunChen/pycontour) is free software made available under the Apache License 2.0. For details see the LICENSE file.
+[pycontour](https://github.com/PingjunChen/pycontour) is free software made available under the Apache License 2.0. For details see the [LICENSE](LICENSE) file.
 
 ## Contributors
-See the AUTHORS.rst file for a complete list of contributors to the project.
+See the [AUTHORS.md](AUTHORS.md) file for a complete list of contributors to the project.
