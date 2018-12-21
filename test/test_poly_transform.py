@@ -10,11 +10,11 @@ PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
 
 
-from pycontour import np_arr_to_point_list
-from pycontour import construct_poly_using_np_arr
-from pycontour import construct_poly_using_point_list
-from pycontour import construct_poly_using_bbox
-from pycontour import poly_to_np_arr
+from coor_transform import np_arr_to_point_list
+from poly_transform import construct_poly_using_np_arr
+from poly_transform import construct_poly_using_point_list
+from poly_transform import construct_poly_using_bbox
+from poly_transform import poly_to_np_arr
 
 
 def test_poly_transform():

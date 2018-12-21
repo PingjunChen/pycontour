@@ -9,9 +9,9 @@ TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
 
-from pycontour import point_list_to_np_arr
-from pycontour import swap_wh
-from pycontour import np_arr_to_point_list
+from coor_transform import point_list_to_np_arr
+from coor_transform import swap_wh
+from coor_transform import np_arr_to_point_list
 
 
 def test_coor_transform():
