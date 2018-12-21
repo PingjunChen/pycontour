@@ -9,7 +9,8 @@ before_install:
     - pip install --upgrade pip
     - pip install opencv-python
     - pip install shapely
+    - pip install -U pytest
 
 script:
-    - cd pycontour/tests
-    - python test_poly_transform.py
+    - cd tests
+    - pytest
