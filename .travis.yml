@@ -12,5 +12,6 @@ before_install:
     - pip install -U pytest
 
 script:
-    - cd tests
+    - cd test
     - pytest
+    - echo "Hello pycontour!!!"
