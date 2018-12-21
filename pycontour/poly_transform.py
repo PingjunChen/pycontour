@@ -4,8 +4,8 @@ import os, sys
 import numpy as np
 from shapely.geometry import Polygon, box
 
-from pycontour import np_arr_to_point_list
-from pycontour import point_list_to_np_arr
+from coor_transform import np_arr_to_point_list
+from coor_transform import point_list_to_np_arr
 
 __all__ = ["construct_poly_using_np_arr", "construct_poly_using_point_list",
     "construct_poly_using_bbox", "poly_to_np_arr"]
@@ -16,12 +16,12 @@ def construct_poly_using_np_arr(np_arr):
     Parameters
     ----------
     np_arr : np.array
-        Numpy array of point set    
+        Numpy array of point set
 
     Returns
     -------
     poly : Polygon
-        Contour with shapely polygon format    
+        Contour with shapely polygon format
 
     """
     point_list = np_arr_to_point_list(np_arr)
@@ -35,7 +35,7 @@ def construct_poly_using_point_list(point_list):
     Parameters
     ----------
     point_list : list
-        List of point set    
+        List of point set
 
     Returns
     -------
@@ -54,17 +54,17 @@ def construct_poly_using_bbox(min_w, min_h, max_w, max_h):
     ----------
     min_w : int
         Minimum x coordinate of polygon
-    min_h : int 
-        Minimum y coordinate of polygon        
+    min_h : int
+        Minimum y coordinate of polygon
     max_w : int
         Maximum x coordinate of polygon
-    max_h : int 
-        Maximum y coordinate of polygon  
+    max_h : int
+        Maximum y coordinate of polygon
 
     Returns
     -------
     poly : Polygon
-        Contour with shapely polygon format  
+        Contour with shapely polygon format
 
     """
     poly = box(min_w, min_h, max_w, max_h)
@@ -77,7 +77,7 @@ def poly_to_np_arr(poly):
     Parameters
     ----------
     poly : Polygon
-        Contour with shapely polygon format  
+        Contour with shapely polygon format
 
     Returns
     -------

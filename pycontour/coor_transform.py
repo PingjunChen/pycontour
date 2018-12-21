@@ -16,8 +16,8 @@ def swap_wh(np_arr):
     Returns
     -------
     np_arr : np.array
-        Numpy array with width and height position change 
-  
+        Numpy array with width and height position change
+
     """
 
     np_arr[[0,1]] = np_arr[[1,0]]
@@ -34,7 +34,7 @@ def np_arr_to_point_list(np_arr):
     Returns
     -------
     point_list : list
-        List of point set        
+        List of point set
     """
 
     point_list = []
@@ -49,13 +49,13 @@ def point_list_to_np_arr(point_list):
      Parameters
     ----------
     point_list : list
-        List of point set            
+        List of point set
 
     Returns
     -------
     np_arr : np.array
-        Numpy array of point set    
-    
+        Numpy array of point set
+
     """
     num_point = len(point_list)
     np_arr = np.zeros((2, num_point))

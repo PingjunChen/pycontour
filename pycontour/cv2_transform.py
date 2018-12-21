@@ -15,7 +15,7 @@ def cv_cnt_to_np_arr(cv_cnt):
     Returns
     -------
     cnt_arr : np.array
-        Numpy array of point set     
+        Numpy array of point set
     """
     cnt_arr = cv_cnt.squeeze().transpose()
 
@@ -26,12 +26,12 @@ def np_arr_to_cv_cnt(np_arr):
     Parameters
     ----------
     cnt_arr : np.array
-        Numpy array of point set    
+        Numpy array of point set
     Returns
     -------
     cv_cnt : np.array
         Contour with opencv format
-                    
+
     """
     arr_t = np_arr.transpose()
     cv_cnt = np.expand_dims(arr_t, axis=1)

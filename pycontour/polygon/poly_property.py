@@ -17,7 +17,7 @@ def get_poly_area(poly):
     area_val : int
         Number of pixels inside the contour
 
-    """   
+    """
 
     area_val = poly.area
 
@@ -25,7 +25,7 @@ def get_poly_area(poly):
 
 
 def get_poly_bounds(poly):
-    """Find the bounds of the Polygon 
+    """Find the bounds of the Polygon
     Parameters
     ----------
     poly : Polygon
@@ -36,13 +36,13 @@ def get_poly_bounds(poly):
     min_x : int
         Minimum x coordinate of polygon
     min_y : int
-        Minimum y coordinate of polygon    
+        Minimum y coordinate of polygon
     max_x : int
-        Maximum x coordinate of polygon    
+        Maximum x coordinate of polygon
     max_y : int
-        Maximum y coordinate of polygon        
+        Maximum y coordinate of polygon
 
-    """   
+    """
 
     min_x, min_y, max_x, max_y = poly.bounds
 
@@ -50,7 +50,7 @@ def get_poly_bounds(poly):
 
 
 def get_poly_wh(poly):
-    """Find width and height of the Polygon 
+    """Find width and height of the Polygon
     Parameters
     ----------
     poly : Polygon
@@ -61,9 +61,9 @@ def get_poly_wh(poly):
     poly_w : int
         Width of the polygon
     poly_h : int
-        Height of the polygon   
+        Height of the polygon
 
-    """    
+    """
     min_x, min_y, max_x, max_y = get_poly_bounds(poly)
     poly_w, poly_h = max_x - min_x, max_y - min_y
 

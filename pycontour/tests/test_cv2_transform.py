@@ -5,10 +5,10 @@ import scipy.misc as misc
 import cv2
 import matplotlib.pyplot as plt
 
-from pycontour import DATA_DIR
 from pycontour import cv_cnt_to_np_arr, np_arr_to_cv_cnt
+from pycontour import DATA_DIR
 
-from .extract_cv2_cnts import extract_cnt_using_cv2
+from extract_cv2_cnts import extract_cnt_using_cv2
 
 def test_cv_np_transfom(tmp_cnt):
     # convert cv2 contour to numpy array

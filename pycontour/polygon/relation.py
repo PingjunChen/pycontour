@@ -2,7 +2,8 @@
 
 import os, sys
 from shapely.geometry import Polygon
-from pycontour import construct_poly_using_np_arr
+
+from ..poly_transform import construct_poly_using_np_arr
 
 __all__ = ["contour_intersects", "construct_intersection_polygon",
         "contour_contains"]
@@ -11,12 +12,12 @@ __all__ = ["contour_intersects", "construct_intersection_polygon",
 def contour_intersects(np_arr1, np_arr2):
     """Determine two contours are intersected or not
     Parameters
-    ----------    
+    ----------
     np_arr1 : np.array
         Contour with numpy array format
     np_arr2 : np.array
         Contour with numpy array format
-    
+
     Returns
     -------
     inter_flag : bool
@@ -38,12 +39,12 @@ def contour_intersects(np_arr1, np_arr2):
 def construct_intersection_polygon(np_arr1, np_arr2):
     """Construct polygon from the intersection part of two contours
     Parameters
-    ----------    
+    ----------
     np_arr1 : np.array
         Contour with numpy array format
     np_arr2 : np.array
         Contour with numpy array format
-    
+
     Returns
     -------
     inter_poly : Polygon
@@ -68,17 +69,17 @@ def construct_intersection_polygon(np_arr1, np_arr2):
 def contour_contains(np_arr1, np_arr2):
     """Determine if contour of np_arr1 contains contour of np_arr2 or not
     Parameters
-    ----------    
+    ----------
     np_arr1 : np.array
         Contour with numpy array format
     np_arr2 : np.array
         Contour with numpy array format
-    
+
     Returns
     -------
     in_status : bool
         Check if polygon 1 contains polygon 2 or not
-        
+
     """
     # Construct polygon from numpy array
     poly1 = construct_poly_using_np_arr(np_arr1)
