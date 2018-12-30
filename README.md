@@ -21,7 +21,7 @@ Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), 
 [Sphinx](http://www.sphinx-doc.org).
 
 ## Contributing
-All questions, bug reports, and suggestions etc. are welcome through [Issue](https://github.com/PingjunChen/pycontour/issues). New features are welcome through [Pull Request](https://github.com/PingjunChen/pycontour/pulls).
+All questions, bug reports, and suggestions etc. are welcome to [Issue](https://github.com/PingjunChen/pycontour/issues). New features are welcome to [Pull Request](https://github.com/PingjunChen/pycontour/pulls).
 
 ## Contributors
 See the [AUTHORS.md](AUTHORS.md) file for a complete list of contributors to the project.
