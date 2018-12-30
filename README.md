@@ -20,9 +20,11 @@ $ pip install pycontour
 Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and
 [Sphinx](http://www.sphinx-doc.org).
 
-
-## License
-[pycontour](https://github.com/PingjunChen/pycontour) is free software made available under the Apache License 2.0. For details see the [LICENSE](LICENSE) file.
+## Contributing
+All questions, bug reports, and suggestions etc. are welcome through [Issue](https://github.com/PingjunChen/pycontour/issues). New features are welcome through [Pull Request](https://github.com/PingjunChen/pycontour/pulls).
 
 ## Contributors
 See the [AUTHORS.md](AUTHORS.md) file for a complete list of contributors to the project.
+
+## License
+[pycontour](https://github.com/PingjunChen/pycontour) is free software made available under the Apache License 2.0. For details see the [LICENSE](LICENSE) file.

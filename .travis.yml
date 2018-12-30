@@ -14,4 +14,3 @@ before_install:
 script:
     - cd test
     - pytest
-    - echo "Hello pycontour!!!"
