@@ -2,12 +2,20 @@
 
 import os, sys
 
-from pycontour import point_list_to_np_arr
-from pycontour import np_arr_to_cv_cnt
+from os.path import dirname as opd
+from os.path import abspath as opa
+from os.path import join as opj
+TEST_PATH = opa(opd(opd(__file__)))
+PRJ_PATH = opd(TEST_PATH)
+sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
 
-from pycontour.cnt import get_cnt_area
-from pycontour.cnt import get_cnt_aspect_ratio
-from pycontour.cnt import get_cnt_solidity
+from coor_transform import point_list_to_np_arr
+from cv2_transform import np_arr_to_cv_cnt
+
+from cnt import get_cnt_area
+from cnt import get_cnt_aspect_ratio
+from cnt import get_cnt_solidity
+
 
 def test_property(cnt):
     cnt_area = get_cnt_area(cnt)
