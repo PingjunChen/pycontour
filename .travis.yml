@@ -6,6 +6,9 @@ before_install:
     - sudo apt-add-repository -y ppa:ubuntugis/ubuntugis-unstable
     - sudo apt-get update
     - sudo apt-get install libgeos-dev
+    - pip install numpy
+    - pip install scipy
+    - pip install matplotlib
     - pip install --upgrade pip
     - pip install opencv-python
     - pip install shapely
