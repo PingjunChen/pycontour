@@ -7,10 +7,10 @@ from os.path import abspath as opa
 from os.path import join as opj
 TEST_PATH = opa(opd(opd(__file__)))
 PRJ_PATH = opd(TEST_PATH)
-sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
+sys.path.insert(0, PRJ_PATH)
 
-from poly_transform import construct_poly_using_point_list
-from polygon import get_poly_area, get_poly_bounds, get_poly_wh
+from pycontour.poly_transform import construct_poly_using_point_list
+from pycontour.polygon import get_poly_area, get_poly_bounds, get_poly_wh
 
 def test_property():
     point_list1 = [(0, 1), (1, 2), (2, 1), (1, 0)]

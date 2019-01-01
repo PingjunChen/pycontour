@@ -7,11 +7,12 @@ from os.path import abspath as opa
 from os.path import join as opj
 TEST_PATH = opa(opd(opd(__file__)))
 PRJ_PATH = opd(TEST_PATH)
+sys.path.insert(0, PRJ_PATH)
 sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
 
-from coor_transform import point_list_to_np_arr
-from polygon import contour_intersects
-from polygon import construct_intersection_polygon
+from pycontour.coor_transform import point_list_to_np_arr
+from pycontour.polygon import contour_intersects
+from pycontour.polygon import construct_intersection_polygon
 
 def test_relation():
     point_list1 = [(1, 4), (3, 4), (3, 1), (1, 1)]
