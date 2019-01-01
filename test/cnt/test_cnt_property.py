@@ -17,7 +17,7 @@ from pycontour.cnt import get_cnt_aspect_ratio
 from pycontour.cnt import get_cnt_solidity
 
 
-def test_property(cnt):
+def test_property():
     point_list1 = [(0, 1), (1, 2), (2, 1), (1, 0)]
     np_arr1 = point_list_to_np_arr(point_list1)
     cnt1 = np_arr_to_cv_cnt(np_arr1)
