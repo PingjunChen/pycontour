@@ -20,6 +20,23 @@ $ pip install opencv-python
 $ pip install pycontour
 ```
 
+## Usage Example
+Contour representation can be transformed back and forth. The user can operate the contours in their favor manner.
+```
+# load image
+img_path = "./data/Imgs/20181218042607.jpg"
+img = misc.imread(img_path)
+# extract contours using OpenCV
+cnts = extract_cnt_using_cv2(img_path)
+test_cnt = cnts[1]
+# convert cv2 contour to numpy array
+np_arr = cv_cnt_to_np_arr(test_cnt)
+# convert numpy arrary to cv2 contour
+cv_cnt = np_arr_to_cv_cnt(np_arr)
+# draw contour on image
+draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
+```
+
 ## Documentation
 Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and
 [Sphinx](http://www.sphinx-doc.org).
