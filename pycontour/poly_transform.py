@@ -4,8 +4,8 @@ import os, sys
 import numpy as np
 from shapely.geometry import Polygon, box
 
-from coor_transform import np_arr_to_point_list
-from coor_transform import point_list_to_np_arr
+from .coor_transform import np_arr_to_point_list
+from .coor_transform import point_list_to_np_arr
 
 __all__ = ["construct_poly_using_np_arr", "construct_poly_using_point_list",
     "construct_poly_using_bbox", "poly_to_np_arr"]

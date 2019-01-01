@@ -34,7 +34,7 @@ def extract_cnt_using_cv2(img_path):
 
 
 def test_cv_np_transfom():
-    img_path = os.path.join("./data/Imgs", "20181218042607.jpg")
+    img_path = "./data/Imgs/20181218042607.jpg"
     img = misc.imread(img_path)
     cnts = extract_cnt_using_cv2(img_path)
     test_cnt = cnts[1]
