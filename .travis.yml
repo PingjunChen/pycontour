@@ -13,6 +13,7 @@ before_install:
     - pip install opencv-python
     - pip install shapely
     - pip install -U pytest
+    - pip install scikit-image
 
 script:
     - cd test
