@@ -10,8 +10,7 @@ before_install:
     - pip install scipy
     - pip install matplotlib
     - pip install --upgrade pip
-    - pip install opencv-python
-    - pip install shapely
+    - pip install -r requirements.txt
     - pip install -U pytest
     - pip install scikit-image
 

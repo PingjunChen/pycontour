@@ -7,14 +7,13 @@ from os.path import abspath as opa
 from os.path import join as opj
 TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
-sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
+sys.path.insert(0, PRJ_PATH)
 
-
-from coor_transform import np_arr_to_point_list
-from poly_transform import construct_poly_using_np_arr
-from poly_transform import construct_poly_using_point_list
-from poly_transform import construct_poly_using_bbox
-from poly_transform import poly_to_np_arr
+from pycontour.coor_transform import np_arr_to_point_list
+from pycontour.poly_transform import construct_poly_using_np_arr
+from pycontour.poly_transform import construct_poly_using_point_list
+from pycontour.poly_transform import construct_poly_using_bbox
+from pycontour.poly_transform import poly_to_np_arr
 
 
 def test_poly_transform():

@@ -15,8 +15,8 @@ from os.path import abspath as opa
 from os.path import join as opj
 TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
-sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
-from cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
+sys.path.insert(0, PRJ_PATH)
+from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
 
 
 def extract_cnt_using_cv2(img_path):

@@ -7,11 +7,11 @@ from os.path import abspath as opa
 from os.path import join as opj
 TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
-sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
+sys.path.insert(0, PRJ_PATH)
 
-from coor_transform import point_list_to_np_arr
-from coor_transform import swap_wh
-from coor_transform import np_arr_to_point_list
+from pycontour.coor_transform import point_list_to_np_arr
+from pycontour.coor_transform import swap_wh
+from pycontour.coor_transform import np_arr_to_point_list
 
 
 def test_coor_transform():
