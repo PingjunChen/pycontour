@@ -4,7 +4,6 @@
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
 ![](https://img.shields.io/github/license/PingjunChen/pycontour.svg)
 
-
 <img src="./docs/media/wsi-mucosa-tissue.png" width="800" height="320" alt="Banner">
 
 
@@ -13,7 +12,7 @@ Contour is one of the most important concept in plentiful image-based applicatio
 
 
 ## Installation
-To install pycontour, libgeos and shapely need to install in advance. Other required packages can refer requirements.txt.
+To install pycontour, libgeos and shapely need to install in advance. Other required packages can refer to requirements.txt.
 ```
 $ sudo apt-get install libgeos-dev
 $ pip install shapely
@@ -25,11 +24,11 @@ $ pip install pycontour
 Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and
 [Sphinx](http://www.sphinx-doc.org).
 
-## Contributing
-All questions, bug reports, and suggestions etc. are welcome to [Issue](https://github.com/PingjunChen/pycontour/issues). New features are welcome to [Pull Request](https://github.com/PingjunChen/pycontour/pulls).
+## License
+``pycontour`` is free software made available under the MIT License. For details see the [LICENSE](LICENSE) file.
 
 ## Contributors
 See the [AUTHORS.md](AUTHORS.md) file for a complete list of contributors to the project.
 
-## License
-[pycontour](https://github.com/PingjunChen/pycontour) is free software made available under the Apache License 2.0. For details see the [LICENSE](LICENSE) file.
+## Contributing
+``pycontour`` is an open source project and anyone is welcome to contribute. An easy way to get started is by suggesting a new enhancement on the [Issues](https://github.com/PingjunChen/pycontour/issues). If you have found a bug, then either report this through [Issues](https://github.com/PingjunChen/pycontour/issues), or even better, make a fork of the repository, fix the bug and then create a [Pull Request](https://github.com/PingjunChen/pycontour/pulls) to get the fix into the master branch.
