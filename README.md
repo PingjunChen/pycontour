@@ -1,4 +1,4 @@
-# **pycontour - Contour operation utilities**
+# **pycontour - Contour toolkit in Python**
 [![Build Status](https://travis-ci.org/PingjunChen/pycontour.svg?branch=master)](https://travis-ci.org/PingjunChen/pycontour)
 [![Documentation Status](https://readthedocs.org/projects/pycontour/badge/?version=latest)](https://pycontour.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
@@ -20,7 +20,7 @@ $ pip install opencv-python
 $ pip install pycontour
 ```
 
-## Usage Example
+## Usage example
 Contour representation can be transformed back and forth. The user can operate the contours in their favor manner.
 ```
 # load image
