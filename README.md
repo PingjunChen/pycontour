@@ -43,11 +43,11 @@ draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
 Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and
 [Sphinx](http://www.sphinx-doc.org).
 
-## License
-``pycontour`` is free software made available under the MIT License. For details see the [LICENSE](LICENSE) file.
+## Contributing
+``pycontour`` is an open source project and anyone is welcome to contribute. An easy way to get started is by suggesting a new enhancement on the [Issues](https://github.com/PingjunChen/pycontour/issues). If you have found a bug, then either report this through [Issues](https://github.com/PingjunChen/pycontour/issues), or even better, make a fork of the repository, fix the bug and then create a [Pull Request](https://github.com/PingjunChen/pycontour/pulls) to get the fix into the master branch.
 
 ## Contributors
 See the [AUTHORS.md](AUTHORS.md) file for a complete list of contributors to the project.
 
-## Contributing
-``pycontour`` is an open source project and anyone is welcome to contribute. An easy way to get started is by suggesting a new enhancement on the [Issues](https://github.com/PingjunChen/pycontour/issues). If you have found a bug, then either report this through [Issues](https://github.com/PingjunChen/pycontour/issues), or even better, make a fork of the repository, fix the bug and then create a [Pull Request](https://github.com/PingjunChen/pycontour/pulls) to get the fix into the master branch.
+## License
+``pycontour`` is free software made available under the MIT License. For details see the [LICENSE](LICENSE) file.
