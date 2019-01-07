@@ -10,14 +10,15 @@ PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, PRJ_PATH)
 
 from pycontour.poly_transform import construct_poly_using_point_list
-from pycontour.polygon import get_poly_area, get_poly_bounds, get_poly_wh
+from pycontour.polygon import get_poly_area, get_poly_bounds, get_poly_hw
 
 def test_property():
     point_list1 = [(0, 1), (1, 2), (2, 1), (1, 0)]
     poly1 = construct_poly_using_point_list(point_list1)
     area = get_poly_area(poly1)
     bounds = get_poly_bounds(poly1)
-    poly_w, poly_h = get_poly_wh(poly1)
+    poly_h, poly_w = get_poly_hw(poly1)
+
     print("Poly area is: {}".format(area))
     print("Poly bounds is: {}".format(bounds))
     print("Poly width is: {}, height is: {}".format(poly_w, poly_h))
@@ -27,7 +28,7 @@ def test_property():
     poly2 = construct_poly_using_point_list(point_list2)
     area = get_poly_area(poly2)
     bounds = get_poly_bounds(poly2)
-    poly_w, poly_h = get_poly_wh(poly2)
+    poly_h, poly_w = get_poly_hw(poly2)
     print("Poly area is: {}".format(area))
     print("Poly bounds is: {}".format(bounds))
     print("Poly width is: {}, height is: {}".format(poly_w, poly_h))

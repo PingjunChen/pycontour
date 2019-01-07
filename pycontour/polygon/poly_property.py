@@ -3,12 +3,16 @@
 import os, sys
 
 
-__all__ = ["get_poly_area", "get_poly_bounds", "get_poly_wh"]
+__all__ = ["get_poly_area",
+           "get_poly_bounds",
+           "get_poly_hw"]
+
 
 def get_poly_area(poly):
-    """Calcualte the number of pixels Polygon covered
+    """Calcualte the number of pixels the polygon covered.
+
     Parameters
-    ----------
+    -------
     poly : Polygon
         Contour with shapely polygon format
 
@@ -25,32 +29,35 @@ def get_poly_area(poly):
 
 
 def get_poly_bounds(poly):
-    """Find the bounds of the Polygon
+    """Find the bounds of the Polygon.
+
     Parameters
-    ----------
+    -------
     poly : Polygon
         Contour with shapely polygon format
 
     Returns
     -------
-    min_x : int
-        Minimum x coordinate of polygon
-    min_y : int
+    min_h : int
         Minimum y coordinate of polygon
-    max_x : int
-        Maximum x coordinate of polygon
-    max_y : int
+    min_w : int
+        Minimum x coordinate of polygon
+    max_h : int
         Maximum y coordinate of polygon
+    max_w : int
+        Maximum x coordinate of polygon
 
     """
 
     min_x, min_y, max_x, max_y = poly.bounds
+    min_h, min_w = min_y, min_x
+    max_h, max_w = max_y, max_x
 
-    return min_x, min_y, max_x, max_y
+    return min_h, min_w, max_h, max_w
 
 
-def get_poly_wh(poly):
-    """Find width and height of the Polygon
+def get_poly_hw(poly):
+    """Find height and width of the polygon.
     Parameters
     ----------
     poly : Polygon
@@ -58,13 +65,16 @@ def get_poly_wh(poly):
 
     Returns
     -------
-    poly_w : int
-        Width of the polygon
     poly_h : int
         Height of the polygon
+    poly_w : int
+        Width of the polygon
 
     """
-    min_x, min_y, max_x, max_y = get_poly_bounds(poly)
-    poly_w, poly_h = max_x - min_x, max_y - min_y
+
+    min_h, min_w, max_h, max_w = get_poly_bounds(poly)
+
+    poly_h = max_h - min_h + 1
+    poly_w = max_w - min_w + 1
 
     return poly_w, poly_h
