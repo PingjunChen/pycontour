@@ -11,7 +11,7 @@ __all__ = ["cv_cnt_to_np_arr",
 
 
 def cv_cnt_to_np_arr(cv_cnt):
-    """Convert cv2 contour to numpy 2d array ([0]-h, [1]-w)
+    """ Convert cv2 contour to numpy 2d array ([0]-h, [1]-w).
 
     Parameters
     -------
@@ -32,7 +32,7 @@ def cv_cnt_to_np_arr(cv_cnt):
 
 
 def np_arr_to_cv_cnt(np_arr):
-    """Convert numpy 2d array ([0]-h, [1]-w) to cv2 contour
+    """ Convert numpy 2d array ([0]-h, [1]-w) to cv2 contour.
 
     Parameters
     -------

@@ -9,7 +9,7 @@ __all__ = ["get_poly_area",
 
 
 def get_poly_area(poly):
-    """Calcualte the number of pixels the polygon covered.
+    """ Calcualte the number of pixels the polygon covered.
 
     Parameters
     -------
@@ -29,7 +29,7 @@ def get_poly_area(poly):
 
 
 def get_poly_bounds(poly):
-    """Find the bounds of the Polygon.
+    """ Find the bounds of the Polygon.
 
     Parameters
     -------
@@ -57,9 +57,10 @@ def get_poly_bounds(poly):
 
 
 def get_poly_hw(poly):
-    """Find height and width of the polygon.
+    """ Find height and width of the polygon.
+
     Parameters
-    ----------
+    -------
     poly : Polygon
         Contour with shapely polygon format
 

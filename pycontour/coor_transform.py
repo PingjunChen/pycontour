@@ -10,7 +10,7 @@ __all__ = ["swap_wh",
 
 
 def swap_wh(np_arr):
-    """Swap row of width and row of height
+    """ Swap row of width and row of height.
 
     Parameters
     -------
@@ -30,7 +30,7 @@ def swap_wh(np_arr):
 
 
 def np_arr_to_point_list(np_arr):
-    """Convert 2d numpy array to list of points
+    """ Convert 2d numpy array to list of points.
 
     Parameters
     -------
@@ -53,7 +53,7 @@ def np_arr_to_point_list(np_arr):
 
 
 def point_list_to_np_arr(point_list):
-    """Convert list of point coordinates to 2d array
+    """ Convert list of point coordinates to numpy 2d array.
 
     Parameters
     -------

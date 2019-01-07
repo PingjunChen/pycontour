@@ -16,10 +16,10 @@ __all__ = ["construct_poly_using_np_arr",
 
 
 def construct_poly_using_np_arr(np_arr):
-    """Using numpy 2d array ([0]-h, [1]-w) to construct polygon.
+    """ Using numpy 2d array ([0]-h, [1]-w) to construct polygon.
 
     Parameters
-    ----------
+    -------
     np_arr : np.array
         Numpy 2d array ([0]-h, [1]-w)
 
@@ -38,10 +38,10 @@ def construct_poly_using_np_arr(np_arr):
 
 
 def construct_poly_using_point_list(point_list):
-    """Using point list to construct polygon.
+    """ Using point list to construct polygon.
 
     Parameters
-    ----------
+    -------
     point_list : list
         List of point set ([0]-h, [1]-w)
 
@@ -62,10 +62,10 @@ def construct_poly_using_point_list(point_list):
 
 
 def construct_poly_using_bbox(min_h, min_w, max_h, max_w):
-    """Using bounding box to construct polygon.
+    """ Using bounding box to construct polygon.
 
     Parameters
-    ----------
+    -------
     min_h : int
         Minimum y coordinate of polygon
     min_w : int
@@ -88,7 +88,7 @@ def construct_poly_using_bbox(min_h, min_w, max_h, max_w):
 
 
 def poly_to_np_arr(poly):
-    """Convert shapely Polygon to numpy 2d array ([0]-h, [1]-w).
+    """ Convert shapely Polygon to numpy 2d array ([0]-h, [1]-w).
 
     Parameters
     -------

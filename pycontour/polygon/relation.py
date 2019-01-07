@@ -75,9 +75,8 @@ def construct_intersection_polygon(np_arr1, np_arr2):
     return inter_poly
 
 
-
 def contour_contains(np_arr1, np_arr2):
-    """Determine if contour of np_arr1 contains contour of np_arr2.
+    """ Determine if contour of np_arr1 contains contour of np_arr2.
 
     Parameters
     -------
