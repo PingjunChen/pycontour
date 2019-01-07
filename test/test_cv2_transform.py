@@ -38,7 +38,6 @@ def test_cv_np_transfom():
     img = misc.imread(img_path)
     cnts = extract_cnt_using_cv2(img_path)
     test_cnt = cnts[1]
-
     # convert cv2 contour to numpy array
     np_arr = cv_cnt_to_np_arr(test_cnt)
     # convert numpy arrary to cv2 contour

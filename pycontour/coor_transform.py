@@ -3,13 +3,17 @@
 import os, sys
 import numpy as np
 
-__all__ = ["swap_wh", "np_arr_to_point_list", "point_list_to_np_arr"]
+
+__all__ = ["swap_wh",
+           "np_arr_to_point_list",
+           "point_list_to_np_arr"]
 
 
 def swap_wh(np_arr):
     """Swap row of width and row of height
-     Parameters
-    ----------
+
+    Parameters
+    -------
     np_arr : np.array
         Numpy array with width and height
 
@@ -24,10 +28,12 @@ def swap_wh(np_arr):
 
     return np_arr
 
+
 def np_arr_to_point_list(np_arr):
     """Convert 2d numpy array to list of points
-     Parameters
-    ----------
+
+    Parameters
+    -------
     np_arr : np.array
         Numpy array of point set
 
@@ -35,6 +41,7 @@ def np_arr_to_point_list(np_arr):
     -------
     point_list : list
         List of point set
+
     """
 
     point_list = []
@@ -44,10 +51,12 @@ def np_arr_to_point_list(np_arr):
 
     return point_list
 
+
 def point_list_to_np_arr(point_list):
     """Convert list of point coordinates to 2d array
-     Parameters
-    ----------
+
+    Parameters
+    -------
     point_list : list
         List of point set
 
@@ -57,6 +66,7 @@ def point_list_to_np_arr(point_list):
         Numpy array of point set
 
     """
+
     num_point = len(point_list)
     np_arr = np.zeros((2, num_point))
     for ind in range(num_point):
