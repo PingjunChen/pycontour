@@ -2,7 +2,7 @@
 
 import os, sys
 import numpy as np
-import scipy.misc as misc
+import imageio
 import matplotlib.pyplot as plt
 from scipy.ndimage import binary_fill_holes
 from skimage import img_as_ubyte
@@ -20,7 +20,7 @@ from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
 
 
 def extract_cnt_using_cv2(img_path):
-    img = misc.imread(img_path)
+    img = imageio.imread(img_path)
     gray = np.dot(img, [0.299, 0.587, 0.114])
     binary = gray < 200
     no_small = remove_small_objects(binary, min_size=5000, connectivity=8)
@@ -35,7 +35,7 @@ def extract_cnt_using_cv2(img_path):
 
 def test_cv_np_transfom():
     img_path = "./data/Imgs/20181218042607.jpg"
-    img = misc.imread(img_path)
+    img = imageio.imread(img_path)
     cnts = extract_cnt_using_cv2(img_path)
     test_cnt = cnts[1]
     # convert cv2 contour to numpy array
