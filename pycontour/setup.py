@@ -2,6 +2,7 @@
 
 import os, sys
 
+
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
 PKG_NAME = os.path.basename(BASE_PATH)
 
@@ -14,13 +15,6 @@ def configuration(parent_package='', top_path=None):
     # Add subpackage
     config.add_subpackage('cnt')
     config.add_subpackage('polygon')
-
-    # Add test directories
-    from os.path import isdir, dirname, join
-    rel_isdir = lambda d: isdir(join(curpath, d))
-
-    for test_dir in subdirs:
-        config.add_data_dir(test_dir)
 
     return config
 

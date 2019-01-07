@@ -2,6 +2,7 @@
 
 import os, sys
 
+
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
 MODULE_NAME = os.path.basename(BASE_PATH)
 
@@ -13,12 +14,13 @@ def configuration(parent_package='', top_path=None):
 
     return config
 
+
 if __name__ == '__main__':
     from numpy.distutils.core import setup
     setup(maintainer='Pingjun Chen',
           maintainer_email='chenpingjun@gmx.com',
           description='Polygon operation utilities.',
-          url='https://github.com/PingjunChen/pydaily',
-          license='Apache',
+          url='https://github.com/PingjunChen/pycontour',
+          license='MIT',
           **(configuration(top_path='').todict())
           )
