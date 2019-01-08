@@ -78,4 +78,4 @@ def get_poly_hw(poly):
     poly_h = max_h - min_h + 1
     poly_w = max_w - min_w + 1
 
-    return poly_w, poly_h
+    return poly_h, poly_w

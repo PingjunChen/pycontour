@@ -19,14 +19,16 @@ def swap_wh(np_arr):
 
     Returns
     -------
-    np_arr : np.array
+    new_arr : np.array
         Numpy array with width and height position change
 
     """
 
-    np_arr[[0,1]] = np_arr[[1,0]]
+    new_arr = np.zeros_like(np_arr)
+    new_arr[0] = np_arr[1]
+    new_arr[1] = np_arr[0]
 
-    return np_arr
+    return new_arr
 
 
 def np_arr_to_point_list(np_arr):

@@ -2,9 +2,9 @@
 
 import os, sys
 import numpy as np
-from skimage import io
 import matplotlib.pyplot as plt
 from scipy.ndimage import binary_fill_holes
+from skimage import io
 from skimage import img_as_ubyte
 from skimage.morphology import remove_small_objects
 from skimage.morphology import disk, binary_closing
@@ -42,8 +42,8 @@ def test_cv_np_transfom():
     np_arr = cv_cnt_to_np_arr(test_cnt)
     # convert numpy arrary to cv2 contour
     cv_cnt = np_arr_to_cv_cnt(np_arr)
+    assert np.array_equal(test_cnt, cv_cnt)
 
-    draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
-
+    # draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
     # plt.imshow(draw_img)
     # plt.show()

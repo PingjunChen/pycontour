@@ -56,7 +56,7 @@ def construct_poly_using_point_list(point_list):
     for ind in np.arange(len(point_list)):
         hw_point_list.append((point_list[ind][1], point_list[ind][0]))
 
-    poly = Polygon(point_list)
+    poly = Polygon(hw_point_list)
 
     return poly
 

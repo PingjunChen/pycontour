@@ -18,7 +18,7 @@ from pycontour.cnt import get_cnt_solidity
 
 
 def test_property():
-    point_list1 = [(0, 1), (1, 2), (2, 1), (1, 0)]
+    point_list1 = [(0.0, 1.0), (1.0, 2.0), (2.0, 1.0), (1.0, 0.0)]
     np_arr1 = point_list_to_np_arr(point_list1)
     cnt1 = np_arr_to_cv_cnt(np_arr1)
     cnt_area = get_cnt_area(cnt1)
@@ -28,7 +28,7 @@ def test_property():
     print("Contour aspect ratio is {}".format(cnt_aspect_ratio))
     print("Contour solidity is {}".format(cnt_solidty))
 
-    point_list2 = [(0, 0), (1, 2), (2, 0), (1, 0), (1, -1)]
+    point_list2 = [(0.0, 0.0), (1.0, 2.0), (2.0, 0.0), (1.0, 0.0), (1.0, -1.0)]
     np_arr2 = point_list_to_np_arr(point_list2)
     cnt2 = np_arr_to_cv_cnt(np_arr2)
     cnt_area = get_cnt_area(cnt2)
