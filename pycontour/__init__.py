@@ -4,7 +4,7 @@ import os, sys
 
 __all__ = ["PKG_DIR", "__version__"]
 
-__version__ = '1.1.0'
+__version__ = '1.2.0'
 PKG_DIR = os.path.abspath(os.path.dirname(__file__))
 
 from .coor_transform import *
