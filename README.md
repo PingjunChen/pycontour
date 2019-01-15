@@ -8,13 +8,13 @@
 
 
 ## Motivation
-Contour is one of the most important concept in plenty of image-based applications, mainly for region of interest (ROI) representation, especially in medical imaging domain. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionality support.
+Contour is one of the most important concept in plenty of image-based applications, mainly for the representation of region of interest (ROI), especially in medical imaging domain. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionality support.
 
-This package tries to standardize and simplify the contour representation in python. Different from OpenCV, each contour is represented as a numpy array with shape 2*n and height always comes first. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to use the functionalities of these two packages. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
+This package tries to simplify and standardize the contour representation in python. Different from OpenCV, each contour is represented as a numpy 2d array with shape 2*n and height always comes first in this package. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to use the functionalities of OpenCV and shapely. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
 
 
 ## Installation
-To install pycontour, libgeos and shapely need to install in advance. Other required packages can refer to requirements.txt.
+To install pycontour, libgeos need to install in advance. Other required packages can refer to requirements.txt.
 ```
 $ sudo apt-get install libgeos-dev
 $ pip install shapely
