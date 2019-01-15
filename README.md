@@ -7,10 +7,10 @@
 <img src="./docs/media/wsi-mucosa-tissue.png" width="800" height="320" alt="Banner">
 
 
-## Origin
-Contour is one of the most important concept in lots of image-based applications, especially in medical imaging domain, mainly for region of interest (ROI) representation. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionality support.
+## Motivation
+Contour is one of the most important concept in plenty of image-based applications, mainly for region of interest (ROI) representation, especially in medical imaging domain. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionality support.
 
-This package tries to simplify the usage of contour operation, using numpy 2d array ([0]-h, [1]-w) as the standards for contour representation.  If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
+This package tries to standardize and simplify the contour representation in python. Different from OpenCV, each contour is represented as a numpy array with shape 2*n and height always comes first. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to use the functionalities of these two packages. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
 
 
 ## Installation
