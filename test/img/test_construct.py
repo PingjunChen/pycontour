@@ -2,6 +2,7 @@
 
 import os, sys
 import numpy as np
+import matplotlib.pyplot as plt
 
 from os.path import dirname as opd
 from os.path import abspath as opa
@@ -17,8 +18,10 @@ from pycontour.cnt import get_cnt_area
 
 
 def test_build_cnt_mask():
-    np_arr = np.array([[0., 3., 3., 0.], [0., 0., 3., 3.]])
+    np_arr = np.array([[1., 3., 5., 4., 2.], [1., 0., 3., 4., 3]])
     mask = build_cnt_mask(np_arr)
+    # plt.imshow(mask)
+    # plt.show()
     mask_pixel_num = np.count_nonzero(mask==255)
 
     # calculate the contour area
