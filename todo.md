@@ -1,6 +1,6 @@
 ## Todo
 
-- [ ] DocString
+- [x] DocString
 - [ ] Testing
 - [ ] Documentation
 - [x] Issues

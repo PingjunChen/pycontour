@@ -33,7 +33,7 @@ def contour_intersects(np_arr1, np_arr2):
     poly2 = construct_poly_using_np_arr(np_arr2)
 
     # Get convex_hull of polygon
-    poly1 = poly1.convex_hull  # Get convex hull of poly
+    poly1 = poly1.convex_hull
     poly2 = poly2.convex_hull
 
     inter_flag = poly1.intersects(poly2)

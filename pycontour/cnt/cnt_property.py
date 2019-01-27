@@ -53,7 +53,7 @@ def get_cnt_aspect_ratio(cnt):
 
 def get_cnt_solidity(cnt):
     """ Calcualte the solidity of contour.
-    
+
     Parameters
     -------
     cnt : np.array

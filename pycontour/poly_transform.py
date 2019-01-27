@@ -52,11 +52,11 @@ def construct_poly_using_point_list(point_list):
 
     """
 
-    hw_point_list = []
+    wh_point_list = []
     for ind in np.arange(len(point_list)):
-        hw_point_list.append((point_list[ind][1], point_list[ind][0]))
+        wh_point_list.append((point_list[ind][1], point_list[ind][0]))
 
-    poly = Polygon(hw_point_list)
+    poly = Polygon(wh_point_list)
 
     return poly
 
