@@ -15,14 +15,16 @@ def swap_wh(np_arr):
     Parameters
     -------
     np_arr : np.array
-        Numpy array with width and height
+        Numpy array with height and width
 
     Returns
     -------
     new_arr : np.array
-        Numpy array with width and height position change
+        Numpy array with width and height position changed
 
     """
+
+    assert len(np_arr.shape) == 2 and np_arr.shape[0] == 2, "Wrong contour arr"
 
     new_arr = np.zeros_like(np_arr)
     new_arr[0] = np_arr[1]
@@ -42,13 +44,13 @@ def np_arr_to_point_list(np_arr):
     Returns
     -------
     point_list : list
-        List of point set
+        List of points
 
     """
 
     point_list = []
     num_point = np_arr.shape[1]
-    for ind in range(num_point):
+    for ind in np.arange(num_point):
         point_list.append((np_arr[0][ind], np_arr[1][ind]))
 
     return point_list
@@ -71,7 +73,7 @@ def point_list_to_np_arr(point_list):
 
     num_point = len(point_list)
     np_arr = np.zeros((2, num_point))
-    for ind in range(num_point):
+    for ind in np.arange(num_point):
         np_arr[0][ind] = point_list[ind][0]
         np_arr[1][ind] = point_list[ind][1]
 
