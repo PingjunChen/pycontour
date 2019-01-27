@@ -10,4 +10,3 @@
 ### Functionality
 - Relation: point in contour or not
 - Construct image from contour
- 

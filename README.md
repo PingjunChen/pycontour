@@ -1,4 +1,4 @@
-# **pycontour - Contour toolkit in Python**
+# **pycontour - Python contour toolkit**
 [![Build Status](https://travis-ci.org/PingjunChen/pycontour.svg?branch=master)](https://travis-ci.org/PingjunChen/pycontour)
 [![Documentation Status](https://readthedocs.org/projects/pycontour/badge/?version=latest)](https://pycontour.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
@@ -8,22 +8,22 @@
 
 
 ## Motivation
-Contour is one of the most important concept in plenty of image-based applications, mainly for the representation of region of interest (ROI), especially in medical imaging domain. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionality support.
+Contour is one of the most important concept in plenty of image-based applications, mainly for the representation of region of interest (ROI), especially in medical imaging area. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionalities.
 
-This package tries to simplify and standardize the contour representation in python. Different from OpenCV, each contour is represented as a numpy 2d array with shape 2*n and height always comes first in this package. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to use the functionalities of OpenCV and shapely. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
+This package tries to standardize the contour representation in python. Different from OpenCV, each contour is represented as a numpy 2d array with shape 2*N ([0-h 1-w]), in which height always comes first. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to take advantage of the functionalities of both OpenCV and shapely. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
 
 
 ## Installation
 To install pycontour, libgeos need to install in advance. Other required packages can refer to requirements.txt.
 ```
 $ sudo apt-get install libgeos-dev
-$ pip install shapely
-$ pip install opencv-python skimage
+$ pip install shapely opencv-python skimage
 $ pip install pycontour
 ```
 
 ## Usage example
-Contour representation can be transformed back and forth. The user can operate the contours in their favor manner.
+Contour representation can be transformed back and forth between this representation with the way OpenCV or shapely represents. The user can use contour in their favor manner. We recommend numpy 2d array (2*N:[0-h 1-w]) as the standard representation, which is easiest to understand in our opinion.
+
 ```
 # load image
 img_path = "./data/Imgs/20181218042607.jpg"
@@ -31,9 +31,9 @@ img = misc.imread(img_path)
 # extract contours using OpenCV
 cnts = extract_cnt_using_cv2(img_path)
 test_cnt = cnts[1]
-# convert cv2 contour to numpy array
+# convert cv2 contour to numpy 2d array
 np_arr = cv_cnt_to_np_arr(test_cnt)
-# convert numpy arrary to cv2 contour
+# convert numpy 2d arrary to cv2 contour
 cv_cnt = np_arr_to_cv_cnt(np_arr)
 # draw contour on image
 draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
