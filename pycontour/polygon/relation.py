@@ -3,7 +3,7 @@
 import os, sys
 from shapely.geometry import Polygon
 
-from ..poly_transform import construct_poly_using_np_arr
+from ..poly_transform import np_arr_to_poly
 
 
 __all__ = ["contour_intersects",
@@ -29,8 +29,8 @@ def contour_intersects(np_arr1, np_arr2):
     """
 
     # Construct polygon from numpy array
-    poly1 = construct_poly_using_np_arr(np_arr1)
-    poly2 = construct_poly_using_np_arr(np_arr2)
+    poly1 = np_arr_to_poly(np_arr1)
+    poly2 = np_arr_to_poly(np_arr2)
 
     # Get convex_hull of polygon
     poly1 = poly1.convex_hull
@@ -63,8 +63,8 @@ def construct_intersection_polygon(np_arr1, np_arr2):
         return None
 
     # Construct polygon from numpy array
-    poly1 = construct_poly_using_np_arr(np_arr1)
-    poly2 = construct_poly_using_np_arr(np_arr2)
+    poly1 = np_arr_to_poly(np_arr1)
+    poly2 = np_arr_to_poly(np_arr2)
 
     # Get convex_hull of polygon
     poly1 = poly1.convex_hull  # Get convex hull of poly
@@ -93,8 +93,8 @@ def contour_contains(np_arr1, np_arr2):
     """
 
     # Construct polygon from numpy array
-    poly1 = construct_poly_using_np_arr(np_arr1)
-    poly2 = construct_poly_using_np_arr(np_arr2)
+    poly1 = np_arr_to_poly(np_arr1)
+    poly2 = np_arr_to_poly(np_arr2)
 
     # Get convex_hull of polygon
     poly1 = poly1.convex_hull  # Get convex hull of poly

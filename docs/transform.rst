@@ -46,29 +46,29 @@ def np_arr_to_cv_cnt(np_arr):
 
     """
 
-construct_poly_using_np_arr
+np_arr_to_poly
 --------
 ::
 
-def construct_poly_using_np_arr(np_arr):
+def np_arr_to_poly(np_arr):
     """ Using numpy 2d array ([0]-h, [1]-w) to construct polygon.
 
     """
 
-construct_poly_using_point_list
+point_list_to_poly
 --------
 ::
 
-def construct_poly_using_point_list(point_list):
+def point_list_to_poly(point_list):
     """ Using point list to construct polygon.
 
     """
 
-construct_poly_using_bbox
+bbox_to_poly
 --------
 ::
 
-def construct_poly_using_bbox(min_w, min_h, max_w, max_h):
+def bbox_to_poly(min_w, min_h, max_w, max_h):
     """ Using bounding box to construct polygon.
 
     """

@@ -3,23 +3,23 @@
 import os, sys
 from shapely.geometry import Point
 
-from ..poly_transform import construct_poly_using_np_arr
+from ..poly_transform import np_arr_to_poly
 
 
 __all__ = ['point_in_contour', ]
 
 
-def point_in_contour(np_arr, px, py):
+def point_in_contour(np_arr, py, px):
     """ Determine point inside contour or not.
 
     Parameters
     -------
     np_arr : np.array
         numpy array with height and width
-    px: int
-        x coordinate of point
     py: int
         y coordinate of point
+    px: int
+        x coordinate of point
 
     Returns
     -------
@@ -28,8 +28,8 @@ def point_in_contour(np_arr, px, py):
 
     """
 
-    point = Point(point_x, point_y)
-    poly = construct_poly_using_np_arr(np_arr)
+    point = Point(px, py)
+    poly = np_arr_to_poly(np_arr)
 
     in_flag = point.within(poly)
 

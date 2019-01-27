@@ -20,6 +20,7 @@ def test_relation():
     point_list1 = [(1.0, 4.0), (3.0, 4.0), (3.0, 1.0), (1.0, 1.0)]
     point_list2 = [(2.0, 3.0), (4.0, 3.0), (4.0, 0.0), (2.0, 0.0)]
     point_list3 = [(3.0, 1.0), (5.0, 1.0), (5.0, -2.0), (3.0, -2.0)]
+    
     # Convert point list to numpy array
     np_arr1 = point_list_to_np_arr(point_list1)
     np_arr2 = point_list_to_np_arr(point_list2)

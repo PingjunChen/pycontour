@@ -9,13 +9,13 @@ from .coor_transform import np_arr_to_point_list
 from .coor_transform import point_list_to_np_arr
 
 
-__all__ = ["construct_poly_using_np_arr",
-           "construct_poly_using_point_list",
-           "construct_poly_using_bbox",
+__all__ = ["np_arr_to_poly",
+           "point_list_to_poly",
+           "bbox_to_poly",
            "poly_to_np_arr"]
 
 
-def construct_poly_using_np_arr(np_arr):
+def np_arr_to_poly(np_arr):
     """ Using numpy 2d array ([0]-h, [1]-w) to construct polygon.
 
     Parameters
@@ -37,7 +37,7 @@ def construct_poly_using_np_arr(np_arr):
     return poly
 
 
-def construct_poly_using_point_list(point_list):
+def point_list_to_poly(point_list):
     """ Using point list to construct polygon.
 
     Parameters
@@ -61,7 +61,7 @@ def construct_poly_using_point_list(point_list):
     return poly
 
 
-def construct_poly_using_bbox(min_h, min_w, max_h, max_w):
+def bbox_to_poly(min_h, min_w, max_h, max_w):
     """ Using bounding box to construct polygon.
 
     Parameters
