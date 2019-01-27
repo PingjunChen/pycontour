@@ -9,22 +9,22 @@ from ..poly_transform import construct_poly_using_np_arr
 __all__ = ['point_in_contour', ]
 
 
-def point_in_contour(np_arr, point_x, point_y):
+def point_in_contour(np_arr, px, py):
     """ Determine point inside contour or not.
 
     Parameters
     -------
     np_arr : np.array
         numpy array with height and width
-    point_x: int
+    px: int
         x coordinate of point
-    point_y: int
+    py: int
         y coordinate of point
 
     Returns
     -------
     in_flag : bool
-        flag that point within contour or not
+        flag indicates point within contour or not
 
     """
 

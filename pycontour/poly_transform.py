@@ -105,8 +105,7 @@ def poly_to_np_arr(poly):
     x_coors, y_coors = poly.exterior.coords.xy
     x_coors = x_coors[:-1].tolist()
     y_coors = y_coors[:-1].tolist()
-    point_list = [(x, y) for x, y in zip(x_coors, y_coors)]
+    point_list = [(y, x) for x, y in zip(x_coors, y_coors)]
     cnt_arr = point_list_to_np_arr(point_list)
-    cnt_arr = swap_wh(cnt_arr)
 
     return cnt_arr

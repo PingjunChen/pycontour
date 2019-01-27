@@ -53,7 +53,7 @@ def construct_intersection_polygon(np_arr1, np_arr2):
 
     Returns
     -------
-    inter_poly : Polygon
+    inter_poly : Polygon or None
         The intersection polygon of two given polygons
 
     """
