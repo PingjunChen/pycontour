@@ -2,10 +2,9 @@
 
 import os, sys
 
-__all__ = ["PKG_DIR", "__version__"]
+__all__ = ["__version__"]
 
-__version__ = '1.2.5'
-PKG_DIR = os.path.abspath(os.path.dirname(__file__))
+__version__ = '1.2.6'
 
 from .coor_transform import *
 from .cv2_transform import *

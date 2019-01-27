@@ -7,7 +7,7 @@ import pycontour
 
 PKG_NAME = "pycontour"
 VERSION = pycontour.__version__
-DESCRIPTION = "Contour toolkit in Python."
+DESCRIPTION = "Python contour toolkit"
 HOMEPAGE = "https://github.com/PingjunChen/pycontour"
 LICENSE = "MIT"
 AUTHOR_NAME = "Pingjun Chen"
