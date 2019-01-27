@@ -15,8 +15,10 @@ The documentation for `pycontour`_ is mainly organized by sub-modules.
   :caption: User Documentation
 
   transform
-  poly
+  polygon
   cnt
+  img
+  relation
 
 .. _about-docs:
 
