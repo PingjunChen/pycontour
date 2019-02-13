@@ -11,7 +11,7 @@ PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, PRJ_PATH)
 sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
 
-from pycontour.relation import point_in_contour
+from pycontour.rela import point_in_contour
 
 
 def test_point_in_contour():

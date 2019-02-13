@@ -19,7 +19,7 @@ if __name__ == '__main__':
     from numpy.distutils.core import setup
     setup(maintainer='Pingjun Chen',
           maintainer_email='chenpingjun@gmx.com',
-          description='Contour cnt utilities.',
+          description='OpenCV contour utilities.',
           url='https://github.com/PingjunChen/pycontour',
           license='MIT',
           **(configuration(top_path='').todict())

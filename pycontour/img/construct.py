@@ -4,8 +4,8 @@ import os, sys
 import numpy as np
 
 from ..poly_transform import np_arr_to_poly
-from ..polygon import get_poly_bounds
-from ..relation import point_in_contour
+from ..poly import get_poly_bounds
+from ..rela import point_in_contour
 
 
 def build_cnt_mask(np_arr):

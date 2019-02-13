@@ -3,8 +3,8 @@
 .pytest_cache/
 __pycache__/
 
-# Byte-compiled / optimized / DLL files
 
+# Byte-compiled / optimized / DLL files
 *.py[cod]
 *$py.class
 
@@ -16,6 +16,7 @@ sdist/
 eggs/
 *.egg-info/
 *.egg
+
 
 # Jupyter Notebook
 .ipynb_checkpoints

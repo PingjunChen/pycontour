@@ -11,7 +11,7 @@ sys.path.insert(0, PRJ_PATH)
 
 
 from pycontour.poly_transform import point_list_to_poly
-from pycontour.polygon import get_poly_area, get_poly_bounds, get_poly_hw
+from pycontour.poly import get_poly_area, get_poly_bounds, get_poly_hw
 
 
 def test_property():
