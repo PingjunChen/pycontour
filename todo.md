@@ -2,7 +2,7 @@
 
 - [x] Docstring
 - [x] Testing
-- [ ] Documentation
+- [x] Documentation
 - [x] Issues
 - [x] Pull Requests
 
