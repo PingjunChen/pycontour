@@ -15,7 +15,7 @@ def point_in_contour(np_arr, py, px):
     Parameters
     -------
     np_arr : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
     py: int
         y coordinate of point
     px: int

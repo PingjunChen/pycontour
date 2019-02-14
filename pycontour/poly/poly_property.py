@@ -14,12 +14,12 @@ def get_poly_area(poly):
     Parameters
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     Returns
     -------
     area_val : int
-        Number of pixels inside the contour
+        number of pixels inside the contour
 
     """
 
@@ -34,18 +34,18 @@ def get_poly_bounds(poly):
     Parameters
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     Returns
     -------
     min_h : int
-        Minimum y coordinate of polygon
+        minimum y coordinate of polygon
     min_w : int
-        Minimum x coordinate of polygon
+        minimum x coordinate of polygon
     max_h : int
-        Maximum y coordinate of polygon
+        maximum y coordinate of polygon
     max_w : int
-        Maximum x coordinate of polygon
+        maximum x coordinate of polygon
 
     """
 
@@ -62,14 +62,14 @@ def get_poly_hw(poly):
     Parameters
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     Returns
     -------
     poly_h : int
-        Height of the polygon
+        height of the polygon
     poly_w : int
-        Width of the polygon
+        width of the polygon
 
     """
 

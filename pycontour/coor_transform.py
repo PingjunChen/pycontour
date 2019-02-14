@@ -62,12 +62,12 @@ def point_list_to_np_arr(point_list):
     Parameters
     -------
     point_list : list
-        List of point set
+        list of point set ([0]-h, [1]-w)
 
     Returns
     -------
     np_arr : np.array
-        Numpy array of point set
+        contour with standard numpy 2d array format
 
     """
 

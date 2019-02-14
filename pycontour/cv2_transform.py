@@ -16,12 +16,12 @@ def cv_cnt_to_np_arr(cv_cnt):
     Parameters
     -------
     cv_cnt : np.array
-        Contour with opencv format
+        contour with opencv format
 
     Returns
     -------
     cnt_arr : np.array
-        Numpy array of point set
+        contour with standard numpy 2d array format
 
     """
 
@@ -37,12 +37,12 @@ def np_arr_to_cv_cnt(np_arr):
     Parameters
     -------
     cnt_arr : np.array
-        Numpy array of point set
+        contour with standard numpy 2d array format
 
     Returns
     -------
     cv_cnt : np.array
-        Contour with opencv format
+        contour with opencv format
 
     """
 

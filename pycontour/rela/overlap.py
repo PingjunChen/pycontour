@@ -13,16 +13,16 @@ def cnt_dice_ratio(cnt1, cnt2, smooth=0.01):
     Parameters
     -------
     cnt1 : np.array
-        contour with numpy 2d array format
+        contour with standard numpy 2d array format
     cnt2 : np.array
-        contour with numpy 2d array format
+        contour with standard numpy 2d array format
     smooth: float
         value for smoothing dice ratio
 
     Returns
     -------
     dice_ratio : float
-        dice ratio value between two contours, ranging from 0.0 to 1.0
+        dice ratio between two contours, ranging from 0.0 to 1.0
 
     """
 
@@ -46,16 +46,16 @@ def cnt_jaccard_index(cnt1, cnt2, smooth=0.01):
     Parameters
     -------
     cnt1 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
     cnt2 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
     smooth: float
-        value for smoothing dice ratio
+        value for smoothing jaccard index
 
     Returns
     -------
     jaccard_index : float
-        jaccard index value between two contours, ranging from 0.0 to 1.0
+        jaccard index between two contours, ranging from 0.0 to 1.0
 
     """
 

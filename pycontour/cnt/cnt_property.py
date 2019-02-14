@@ -16,12 +16,12 @@ def get_cnt_area(cnt):
     Parameters
     -------
     cnt : np.array
-        Contour with opencv format
+        contour with opencv format
 
     Returns
     -------
     area_val : int
-        Number of pixels inside the contour
+        number of pixels inside the contour
 
     """
 
@@ -36,12 +36,12 @@ def get_cnt_aspect_ratio(cnt):
     Parameters
     -------
     cnt : np.array
-        Contour with opencv format
+        contour with opencv format
 
     Returns
     -------
     aspect_ratio : float
-        Value of contour aspect ratio
+        contour aspect ratio
 
     """
 
@@ -57,12 +57,12 @@ def get_cnt_solidity(cnt):
     Parameters
     -------
     cnt : np.array
-        Contour with opencv format
+        contour with opencv format
 
     Returns
     -------
     solidity_val : float
-        Solidity value of contour
+        solidity value of contour
 
     """
 

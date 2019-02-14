@@ -18,12 +18,16 @@ from pycontour.cnt import get_cnt_area
 
 
 def test_build_cnt_mask():
-    np_arr = np.array([[1., 3., 5., 4., 2.], [1., 0., 3., 4., 3]])
-    mask = build_cnt_mask(np_arr)
+    np_arr = np.array([[10, 40, 50, 40, 20], [10, 20, 30, 40, 30]])
+    # np_arr = np.array([[10, 25, 30, 10], [10, 15, 30, 30]])
+    # mask = build_cnt_mask(np_arr)
+    mask = build_cnt_mask(np_arr, mask_size=(100, 100))
+
     # plt.imshow(mask)
     # plt.show()
-    mask_pixel_num = np.count_nonzero(mask==255)
+    # import pdb; pdb.set_trace()
 
+    mask_pixel_num = np.count_nonzero(mask==255)
     # calculate the contour area
     cv_cnt = np_arr_to_cv_cnt(np_arr)
     cnt_area = get_cnt_area(cv_cnt)

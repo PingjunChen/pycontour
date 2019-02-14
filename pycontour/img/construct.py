@@ -8,13 +8,15 @@ from ..poly import get_poly_bounds
 from ..rela import point_in_contour
 
 
-def build_cnt_mask(np_arr):
+def build_cnt_mask(np_arr, mask_size=None):
     """ Build an exterior rectangle mask based on contour
 
     Parameters
     -------
     np_arr : np.array
-        Numpy array with height and width
+        contour with standard numpy 2d array format
+    mask_size: None, scalar, list, or tuple
+        desired mask size for contour
 
     Returns
     -------
@@ -28,10 +30,36 @@ def build_cnt_mask(np_arr):
     min_h, min_w = int(min_h), int(min_w)
     max_h, max_w = int(max_h), int(max_w)
 
-    mask = np.zeros((max_h-min_h+1, max_w-min_w+1), np.uint8)
+
+    cnt_height = max_h - min_h + 1
+    cnt_width = max_w - min_w + 1
+    if mask_size == None:
+        mask_height = cnt_height
+        mask_width = cnt_width
+    elif np.isscalar(mask_size):
+        assert mask_size >= cnt_height and mask_size >= cnt_width, "given size too small"
+        mask_height = mask_size
+        mask_width = mask_size
+    elif type(mask_size) is list or type(mask_size) is tuple:
+        if len(mask_size) == 1:
+            assert mask_size[0] >= cnt_height and mask_size[0] >= cnt_width, "given size too small"
+            mask_height = mask_size[0]
+            mask_width = mask_size[0]
+        elif len(mask_size) == 2:
+            assert mask_size[0] >= cnt_height and mask_size[1] >= cnt_width, "given size too small"
+            mask_height = mask_size[0]
+            mask_width = mask_size[1]
+        else:
+            raise Exception("Not proper size")
+    else:
+        raise Exception("Not proper size")
+
+    mask = np.zeros((mask_height, mask_width), np.uint8)
+    mask_start_h = int(np.floor((mask_height - cnt_height) / 2.0))
+    mask_start_w = int(np.floor((mask_width - cnt_width) / 2.0))
     for px in np.arange(min_w, max_w+1):
         for py in np.arange(min_h, max_h+1):
-            if point_in_contour(np_arr, px, py):
-                mask[py-min_h, px-min_w] = 255
+            if point_in_contour(np_arr, py, px):
+                mask[mask_start_h+py-min_h, mask_start_w+px-min_w] = 255
 
     return mask

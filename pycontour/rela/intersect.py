@@ -17,14 +17,14 @@ def contour_intersects(np_arr1, np_arr2):
     Parameters
     -------
     np_arr1 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
     np_arr2 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
 
     Returns
     -------
     inter_flag : bool
-        Check if two contours are intersected or not.
+        check if two contours are intersected or not.
 
     """
 
@@ -47,14 +47,14 @@ def construct_intersection_polygon(np_arr1, np_arr2):
     Parameters
     -------
     np_arr1 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
     np_arr2 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
 
     Returns
     -------
     inter_poly : Polygon or None
-        The intersection polygon of two given polygons
+        intersection polygon of two given polygons
 
     """
 
@@ -81,14 +81,14 @@ def contour_contains(np_arr1, np_arr2):
     Parameters
     -------
     np_arr1 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
     np_arr2 : np.array
-        Contour with numpy 2d array format
+        contour with standard numpy 2d array format
 
     Returns
     -------
     in_status : bool
-        Check if polygon 1 contains polygon 2 or not
+        check if polygon 1 contains polygon 2 or not
 
     """
 

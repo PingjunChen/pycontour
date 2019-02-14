@@ -21,12 +21,12 @@ def np_arr_to_poly(np_arr):
     Parameters
     -------
     np_arr : np.array
-        Numpy 2d array ([0]-h, [1]-w)
+        contour with standard numpy 2d array format
 
     Returns
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     """
 
@@ -43,12 +43,12 @@ def point_list_to_poly(point_list):
     Parameters
     -------
     point_list : list
-        List of point set ([0]-h, [1]-w)
+        list of point set ([0]-h, [1]-w)
 
     Returns
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     """
 
@@ -67,18 +67,18 @@ def bbox_to_poly(min_h, min_w, max_h, max_w):
     Parameters
     -------
     min_h : int
-        Minimum y coordinate of polygon
+        minimum y coordinate of polygon
     min_w : int
-        Minimum x coordinate of polygon
+        minimum x coordinate of polygon
     max_h : int
-        Maximum y coordinate of polygon
+        maximum y coordinate of polygon
     max_w : int
-        Maximum x coordinate of polygon
+        maximum x coordinate of polygon
 
     Returns
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     """
 
@@ -93,12 +93,12 @@ def poly_to_np_arr(poly):
     Parameters
     -------
     poly : Polygon
-        Contour with shapely polygon format
+        contour with shapely polygon format
 
     Returns
     -------
     cnt_arr : np.array
-        Numpy array of point set
+        contour with standard numpy 2d array format
 
     """
 
