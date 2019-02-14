@@ -22,10 +22,10 @@ def test_build_cnt_mask():
     # np_arr = np.array([[10, 25, 30, 10], [10, 15, 30, 30]])
     mask = build_cnt_mask(np_arr)
     # mask = build_cnt_mask(np_arr, mask_size=(100, 100))
-
-    plt.imshow(mask)
-    plt.show()
-    import pdb; pdb.set_trace()
+    
+    # plt.imshow(mask)
+    # plt.show()
+    # import pdb; pdb.set_trace()
 
     mask_pixel_num = np.count_nonzero(mask==255)
     # calculate the contour area
