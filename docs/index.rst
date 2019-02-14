@@ -14,7 +14,8 @@ The documentation for `pycontour`_ is mainly organized by sub-modules.
   :maxdepth: 2
   :caption: User Documentation
 
-  transform
+  rep_transform
+  cnt_transform
   cnt
   poly
   rela

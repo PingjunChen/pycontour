@@ -17,6 +17,7 @@ def configuration(parent_package='', top_path=None):
     config.add_subpackage('img')
     config.add_subpackage('poly')
     config.add_subpackage('rela')
+    config.add_subpackage('transform')
 
     return config
 
