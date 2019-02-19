@@ -1,0 +1,22 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: circleci/python:3.6
+        steps:
+            - checkout
+            - run: sudo apt-get install libgeos-dev
+            - run:
+                command: |
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                    pip install scipy
+                    pip install matplotlib
+                    pip install -U pytest
+            - run:
+                command: |
+                    . venv/bin/activate
+                    cd test
+                    pytest .
