@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os, sys
-import numpy as np
 from os.path import dirname as opd
 from os.path import abspath as opa
 from os.path import join as opj

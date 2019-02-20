@@ -44,7 +44,7 @@ def get_cnt_aspect_ratio(cnt):
 
     """
 
-    x, _, w, h = cv2.boundingRect(cnt.astype(np.float32))
+    _, _, w, h = cv2.boundingRect(cnt.astype(np.float32))
     aspect_ratio = w * 1.0 / h
 
     return aspect_ratio

@@ -30,6 +30,4 @@ def test_build_cnt_mask():
     mask_pixel_num = np.count_nonzero(mask==255)
     # calculate the contour area
     cv_cnt = np_arr_to_cv_cnt(np_arr)
-    cnt_area = get_cnt_area(cv_cnt)
-
-    # assert mask_pixel_num < cnt_area, "pixels are inside the polygon"
+    _ = get_cnt_area(cv_cnt)
