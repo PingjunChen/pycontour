@@ -8,7 +8,7 @@ MODULE_NAME = os.path.basename(BASE_PATH)
 
 
 def configuration(parent_package='', top_path=None):
-    from numpy.distutils.misc_util import Configuration, get_numpy_include_dirs
+    from numpy.distutils.misc_util import Configuration
 
     config = Configuration(MODULE_NAME, parent_package, top_path)
 

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
 from shapely.geometry import Point
 
 from ..poly_transform import np_arr_to_poly

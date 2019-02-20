@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
-
 from ..poly_transform import np_arr_to_poly
 from .intersect import construct_intersection_polygon
 from ..poly import get_poly_area

@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
-
 
 __all__ = ["get_poly_area",
            "get_poly_bounds",

@@ -24,4 +24,4 @@ def test_point_in_contour():
         raise AssertionError("Test point on the border of contour")
     flag3 = point_in_contour(np_arr, 5, 1)
     if flag3 == True:
-        assert AssertionError("Test point outside contour")
+        raise AssertionError("Test point outside contour")

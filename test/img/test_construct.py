@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
+import sys
 import numpy as np
-import matplotlib.pyplot as plt
 
 from os.path import dirname as opd
 from os.path import abspath as opa
@@ -23,11 +22,12 @@ def test_build_cnt_mask():
     mask = build_cnt_mask(np_arr)
     # mask = build_cnt_mask(np_arr, mask_size=(100, 100))
 
+    # import matplotlib.pyplot as plt
     # plt.imshow(mask)
     # plt.show()
     # import pdb; pdb.set_trace()
 
-    mask_pixel_num = np.count_nonzero(mask==255)
+    _ = np.count_nonzero(mask==255)
     # calculate the contour area
     cv_cnt = np_arr_to_cv_cnt(np_arr)
     _ = get_cnt_area(cv_cnt)

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
+import sys
 from os.path import dirname as opd
 from os.path import abspath as opa
-from os.path import join as opj
 TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, PRJ_PATH)
@@ -16,4 +15,5 @@ def test_coor_transform():
     point_list = [(0.0, 0.0), (2.0, 0.0), (2.0, 2.0), (1.0, 2.0)]
     np_arr = point_list_to_np_arr(point_list)
     new_points = np_arr_to_point_list(np_arr)
-    assert point_list == new_points
+    if point_list != new_points:
+        raise AssertionError("Conversion error")
