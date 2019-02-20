@@ -23,7 +23,8 @@ def swap_wh(np_arr):
 
     """
 
-    assert len(np_arr.shape) == 2 and np_arr.shape[0] == 2, "Wrong contour arr"
+    if not (len(np_arr.shape) == 2 and np_arr.shape[0] == 2):
+        raise AssertionError("Wrong contour arr")
 
     new_arr = np.zeros_like(np_arr)
     new_arr[0] = np_arr[1]

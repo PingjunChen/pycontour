@@ -20,7 +20,8 @@ def test_cnt_dice_ratio():
     cnt2 = np.array([[-1, -1, 1, 1], [1, 3, 3, 1]])
 
     dice_ratio = cnt_dice_ratio(cnt1, cnt2)
-    assert dice_ratio >= 0 and dice_ratio <= 1.0
+    if not (dice_ratio >= 0 and dice_ratio <= 1.0):
+        raise AssertionError("Dice ratio in the wrong range")
 
 
 def test_cnt_jaccard_index():
@@ -28,4 +29,5 @@ def test_cnt_jaccard_index():
     cnt2 = np.array([[-1, -1, 1, 1], [1, 3, 3, 1]])
 
     jaccard_index = cnt_jaccard_index(cnt1, cnt2)
-    assert jaccard_index >= 0.0 and jaccard_index <= 1.0
+    if not (jaccard_index >= 0.0 and jaccard_index <= 1.0):
+        raise AssertionError("jaccard index in the wrong range")

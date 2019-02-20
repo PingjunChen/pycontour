@@ -22,7 +22,8 @@ def test_contour_intersects():
     cnt2 = np.array([[-1, -1, 1, 1], [1, 3, 3, 1]])
 
     intersect_flag = contour_intersects(cnt1, cnt2)
-    assert intersect_flag == True, "Intersection judgement error"
+    if intersect_flag == False:
+        raise AssertionError("Intersection judgement error")
 
 
 def test_construct_intersection_polygon():
@@ -48,7 +49,9 @@ def test_contour_contains():
     cnt3 = np.array([[0.1, 0.1, 1.9, 1.9], [0.1, 1.9, 1.9, 0.1]])
 
     contain_flag = contour_contains(cnt1, cnt2)
-    assert contain_flag == False, "Containing judgement error"
+    if contain_flag == True:
+        raise AssertionError("Containing judgement error")
 
     contain_flag = contour_contains(cnt1, cnt3)
-    assert contain_flag == True, "Containing judgement error"
+    if contain_flag == False:
+        raise AssertionError("Containing judgement error")

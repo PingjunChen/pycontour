@@ -40,16 +40,19 @@ def build_cnt_mask(np_arr, mask_size=None):
         mask_height = cnt_height
         mask_width = cnt_width
     elif np.isscalar(mask_size):
-        assert mask_size >= cnt_height and mask_size >= cnt_width, "given size too small"
+        if not (mask_size >= cnt_height and mask_size >= cnt_width):
+            raise AssertionError("given size too small")
         mask_height = mask_size
         mask_width = mask_size
     elif type(mask_size) is list or type(mask_size) is tuple:
         if len(mask_size) == 1:
-            assert mask_size[0] >= cnt_height and mask_size[0] >= cnt_width, "given size too small"
+            if not (mask_size[0] >= cnt_height and mask_size[0] >= cnt_width):
+                raise AssertionError("given size too small")
             mask_height = mask_size[0]
             mask_width = mask_size[0]
         elif len(mask_size) == 2:
-            assert mask_size[0] >= cnt_height and mask_size[1] >= cnt_width, "given size too small"
+            if not (mask_size[0] >= cnt_height and mask_size[1] >= cnt_width):
+                raise AssertionError("given size too small")
             mask_height = mask_size[0]
             mask_width = mask_size[1]
         else:

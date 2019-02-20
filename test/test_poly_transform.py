@@ -23,7 +23,8 @@ def test_poly_transform():
     point_list = np_arr_to_point_list(np_arr)
     poly2 = point_list_to_poly(point_list)
     print("Bounds of poly2 is: ", poly2.exterior.bounds)
-    assert poly1 == poly2
+    if poly1 != poly2:
+        raise AssertionError("Conversion error")
     min_h, max_h = np.min(np_arr[0]), np.max(np_arr[0])
     min_w, max_w = np.min(np_arr[1]), np.max(np_arr[1])
     poly3 = bbox_to_poly(min_h, min_w, max_h, max_w)
@@ -31,4 +32,5 @@ def test_poly_transform():
     # poly3.exterior.coords.xy
     poly1_arr = poly_to_np_arr(poly1)
     print("Numpy coordinates of poly1 is:")
-    assert np.array_equal(np_arr, poly1_arr)
+    if not np.array_equal(np_arr, poly1_arr):
+        raise AssertionError("Conversion error")

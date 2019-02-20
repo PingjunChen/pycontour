@@ -17,8 +17,11 @@ from pycontour.rela import point_in_contour
 def test_point_in_contour():
     np_arr = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
     flag1 = point_in_contour(np_arr, 3, 2)
-    assert flag1 == True, "Test point inside contour"
+    if flag1 == False:
+        raise AssertionError("Test point inside contour")
     flag2 = point_in_contour(np_arr, 1.01, 1)
-    assert flag2 == True, "Test point on the border of contour"
+    if flag2 == False:
+        raise AssertionError("Test point on the border of contour")
     flag3 = point_in_contour(np_arr, 5, 1)
-    assert flag3 == False, "Test point outside contour"
+    if flag3 == True:
+        assert AssertionError("Test point outside contour")
