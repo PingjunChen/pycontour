@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
 import numpy as np
 
 def shift_cnt(np_arr, shift_h=None, shift_w=None):
