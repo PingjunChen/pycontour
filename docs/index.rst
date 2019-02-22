@@ -17,6 +17,7 @@ The documentation for `pycontour`_ is mainly organized by sub-modules.
   rep_transform
   cnt_transform
   cnt
+  fea
   poly
   rela
   img

@@ -14,6 +14,7 @@ def configuration(parent_package='', top_path=None):
 
     # Add subpackage
     config.add_subpackage('cnt')
+    config.add_subpackage('fea')    
     config.add_subpackage('img')
     config.add_subpackage('poly')
     config.add_subpackage('rela')
