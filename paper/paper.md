@@ -1,19 +1,20 @@
 ---
 title: 'pycontour: A Python package for contour representation and functionalities'
 tags:
-  - contour
-  - boundary
-  - polygon
-  - representation
+    - contour
+    - boundary
+    - polygon
+    - representation
+    - feature
 authors:
- - name: Pingjun Chen
-   orcid: 0000-0003-0528-1713
-   affiliation: "1"
- - name: Lin Yang
-   affiliation: "1"
+    - name: Pingjun Chen
+        orcid: 0000-0003-0528-1713
+        affiliation: "1"
+    - name: Lin Yang
+        affiliation: "1"
 affiliations:
- - name: Department of Biomedical Engineering, University of Florida
-   index: 1
+    - name: Department of Biomedical Engineering, University of Florida
+        index: 1
 date: 17 December 2018
 bibliography: paper.bib
 ---

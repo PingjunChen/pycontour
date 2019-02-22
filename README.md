@@ -8,13 +8,11 @@
 
 <img src="./docs/media/wsi-mucosa-tissue.png" width="800" height="320" alt="Banner">
 
-
 Motivation
 ------------
 Contour is one of the most important concept in plenty of image-based applications, mainly for the representation of region of interest (ROI), especially in medical imaging area. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide a few contour functionalities.
 
-This package tries to standardize the contour representation in python. Different from OpenCV, each contour is represented as a numpy 2d array with shape 2*N ([0-h 1-w]), in which height always comes first. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to take advantage of the functionalities of both OpenCV and shapely. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
-
+This package tries to standardize the contour representation in python. Different from OpenCV, each contour is represented as a numpy 2d array with shape 2*N (0-h 1-w), in which height always comes first. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to take advantage of the functionalities of both OpenCV and shapely. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
 
 Installation
 ------------
@@ -27,9 +25,9 @@ $ pip install pycontour==1.3.2
 
 Usage example
 ------------
-Contour representation can be transformed back and forth between this representation with the way OpenCV or shapely represents. The user can use contour in their favor manner. We recommend numpy 2d array (2*N:[0-h 1-w]) as the standard representation, which is easiest to understand in our opinion.
+Contour representation can be transformed back and forth between this representation with the way OpenCV or shapely represents. The user can use contour in their favor manner. We recommend numpy 2d array (2*N: 0-h, 1-w) as the standard representation, which is easiest to understand in our opinion.
 
-```
+```alpha
 # load image
 img_path = "./data/Imgs/20181218042607.jpg"
 img = misc.imread(img_path)

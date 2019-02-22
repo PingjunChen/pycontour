@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
+import sys
 import numpy as np
 
 from os.path import dirname as opd

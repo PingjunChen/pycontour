@@ -33,7 +33,6 @@ def extract_cnt_using_cv2(img_path):
 
 def test_ZernikeMoments():
     img_path = os.path.join(TEST_PATH, "data/Imgs/20181218042607.jpg")
-    img = io.imread(img_path)
     cnts = extract_cnt_using_cv2(img_path)
     test_cnt = cnts[1]
 
