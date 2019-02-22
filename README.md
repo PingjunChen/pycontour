@@ -21,7 +21,7 @@ To install pycontour, libgeos need to install in advance. Other required package
 ```
 $ sudo apt-get install libgeos-dev
 $ pip install shapely opencv-python skimage
-$ pip install pycontour==1.3.2
+$ pip install pycontour==1.3.3
 ```
 
 Usage example
