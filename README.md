@@ -4,6 +4,7 @@
 [![CircleCI](https://circleci.com/gh/PingjunChen/pycontour.svg?style=svg)](https://circleci.com/gh/PingjunChen/pycontour)
 [![Documentation Status](https://readthedocs.org/projects/pycontour/badge/?version=latest)](https://pycontour.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
+![https://www.paypal.me/PingjunChen](https://img.shields.io/badge/Donate-PayPal-blue.svg)
 ![](https://img.shields.io/github/stars/PingjunChen/pycontour.svg)
 
 <!-- <img src="./docs/media/wsi-mucosa-tissue.png" width="800" height="320" alt="Banner"> -->
