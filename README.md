@@ -1,7 +1,7 @@
 **pycontour - Python contour toolkit**
 ============
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7a79d543daca49f49d2c8e90bc9b14ce)](https://app.codacy.com/app/PingjunChen/pycontour?utm_source=github.com&utm_medium=referral&utm_content=PingjunChen/pycontour&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.org/PingjunChen/pycontour.svg?branch=master)](https://travis-ci.org/PingjunChen/pycontour)
+[![CircleCI](https://circleci.com/gh/PingjunChen/pycontour.svg?style=svg)](https://circleci.com/gh/PingjunChen/pycontour)
 [![Documentation Status](https://readthedocs.org/projects/pycontour/badge/?version=latest)](https://pycontour.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
 ![](https://img.shields.io/github/stars/PingjunChen/pycontour.svg)
