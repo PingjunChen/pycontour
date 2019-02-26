@@ -30,32 +30,38 @@ Usage example
 
 
 ### Transformations
-#### with OpenCV representation
+- with OpenCV representation
+
 ```alpha
 # OpenCV format
 import numpy as np
 from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
 
-np_arr1 = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 cv_cnt = np_arr_to_cv_cnt(np_arr1)
 np_arr2 = cv_cnt_to_np_arr(cv_cnt)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
-#### with Shapely Polygon
+
+- with Shapely Polygon
+
 ```alpha
 # Shapely Polygon
 import numpy as np
 from pycontour.poly_transform import np_arr_to_poly, poly_to_np_arr
 
-np_arr1 = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 poly = np_arr_to_poly(np_arr1)
 np_arr2 = poly_to_np_arr(poly)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
-#### with Point list
+- with Point list
+
 ```alpha
+import numpy as np
 from pycontour.coor_transform import point_list_to_np_arr, np_arr_to_point_list
-np_arr1 = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
+
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 point_list = np_arr_to_point_list(np_arr1)
 np_arr2 = point_list_to_np_arr(point_list)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
@@ -63,25 +69,22 @@ assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equa
 
 ### Images
 ```alpha
+import numpy as np
+from pycontour.img import build_cnt_mask
+
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
+mask = build_cnt_mask(np_arr1)
 ```
 
 ### Features
 ```alpha
-```
+import numpy as np
+from pycontour.fea import ZernikeMoments
 
-```alpha
-# load image
-img_path = "./data/Imgs/20181218042607.jpg"
-img = misc.imread(img_path)
-# extract contours using OpenCV
-cnts = extract_cnt_using_cv2(img_path)
-test_cnt = cnts[1]
-# convert cv2 contour to numpy 2d array
-np_arr = cv_cnt_to_np_arr(test_cnt)
-# convert numpy 2d arrary to cv2 contour
-cv_cnt = np_arr_to_cv_cnt(np_arr)
-# draw contour on image
-draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
+zernike_desc = ZernikeMoments(radius=21)
+cnt_fea = zernike_desc.cal_fea(np_arr1)
+assert len(cnt_fea) == 25, "Feature error"
 ```
 
 Documentation
