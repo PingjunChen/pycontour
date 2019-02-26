@@ -30,10 +30,9 @@ Usage example
 
 
 ### Transformations
-- with OpenCV representation
+- with OpenCV Representation
 
 ```alpha
-# OpenCV format
 import numpy as np
 from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
 
@@ -46,7 +45,6 @@ assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equa
 - with Shapely Polygon
 
 ```alpha
-# Shapely Polygon
 import numpy as np
 from pycontour.poly_transform import np_arr_to_poly, poly_to_np_arr
 
@@ -55,7 +53,8 @@ poly = np_arr_to_poly(np_arr1)
 np_arr2 = poly_to_np_arr(poly)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
-- with Point list
+
+- with Point List
 
 ```alpha
 import numpy as np
