@@ -2,7 +2,6 @@
 
 import os, sys
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.ndimage import binary_fill_holes
 from skimage import io
 from skimage import img_as_ubyte
@@ -12,7 +11,6 @@ import cv2
 
 from os.path import dirname as opd
 from os.path import abspath as opa
-from os.path import join as opj
 TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, PRJ_PATH)
@@ -35,7 +33,6 @@ def extract_cnt_using_cv2(img_path):
 
 def test_cv_np_transfom():
     img_path = os.path.join(TEST_PATH, "data/Imgs/20181218042607.jpg")
-    img = io.imread(img_path)
     cnts = extract_cnt_using_cv2(img_path)
     test_cnt = cnts[1]
     # convert cv2 contour to numpy array
@@ -44,7 +41,3 @@ def test_cv_np_transfom():
     cv_cnt = np_arr_to_cv_cnt(np_arr)
     if not np.array_equal(test_cnt, cv_cnt):
         raise AssertionError("Conversion back and forth error")
-
-    # draw_img = cv2.drawContours(img, [cv_cnt], 0, (0, 0, 255), 7)
-    # plt.imshow(draw_img)
-    # plt.show()

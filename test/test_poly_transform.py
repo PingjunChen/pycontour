@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
+import sys
 import numpy as np
 from os.path import dirname as opd
 from os.path import abspath as opa
-from os.path import join as opj
 TEST_PATH = opa(opd(__file__))
 PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, PRJ_PATH)

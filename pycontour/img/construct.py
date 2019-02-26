@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import os, sys
 import numpy as np
 import cv2
 
 from ..poly_transform import np_arr_to_poly
 from ..cv2_transform import np_arr_to_cv_cnt
 from ..poly import get_poly_bounds
-from ..rela import point_in_contour
 from ..transform import shift_cnt
 
 
@@ -70,11 +68,5 @@ def build_cnt_mask(np_arr, mask_size=None):
     shift_arr = shift_cnt(np_arr, shift_h, shift_w)
     cv_cnt = np_arr_to_cv_cnt(shift_arr)
     cv2.drawContours(mask, [cv_cnt], 0, 255, -1)
-
-    # # Fill using point-wise operation
-    # for px in np.arange(min_w, max_w+1):
-    #     for py in np.arange(min_h, max_h+1):
-    #         if point_in_contour(np_arr, py, px):
-    #             mask[mask_start_h+py-min_h, mask_start_w+px-min_w] = 255
 
     return mask
