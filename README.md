@@ -28,11 +28,10 @@ $ pip install pycontour==1.3.3
 Usage example
 ------------
 
-
 ### Transformations
-- with OpenCV Representation
-
 ```alpha
+# with OpenCV Representation
+
 import numpy as np
 from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
 
@@ -42,9 +41,9 @@ np_arr2 = cv_cnt_to_np_arr(cv_cnt)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
 
-- with Shapely Polygon
-
 ```alpha
+# with Shapely Polygon
+
 import numpy as np
 from pycontour.poly_transform import np_arr_to_poly, poly_to_np_arr
 
@@ -54,9 +53,9 @@ np_arr2 = poly_to_np_arr(poly)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
 
-- with Point List
-
 ```alpha
+# with Point List
+
 import numpy as np
 from pycontour.coor_transform import point_list_to_np_arr, np_arr_to_point_list
 
