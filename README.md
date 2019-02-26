@@ -27,7 +27,47 @@ $ pip install pycontour==1.3.3
 
 Usage example
 ------------
-Contour representation can be transformed back and forth between this representation with the way OpenCV or shapely represents. The user can use contour in their favor manner. We recommend numpy 2d array (2*N: 0-h, 1-w) as the standard representation, which is easiest to understand in our opinion.
+
+
+### Transformations
+#### with OpenCV representation
+```alpha
+# OpenCV format
+import numpy as np
+from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
+
+np_arr1 = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
+cv_cnt = np_arr_to_cv_cnt(np_arr1)
+np_arr2 = cv_cnt_to_np_arr(cv_cnt)
+assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
+```
+#### with Shapely Polygon
+```alpha
+# Shapely Polygon
+import numpy as np
+from pycontour.poly_transform import np_arr_to_poly, poly_to_np_arr
+
+np_arr1 = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
+poly = np_arr_to_poly(np_arr1)
+np_arr2 = poly_to_np_arr(poly)
+assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
+```
+#### with Point list
+```alpha
+from pycontour.coor_transform import point_list_to_np_arr, np_arr_to_point_list
+np_arr1 = np.array([[1., 2., 4., 5., 3.], [1., 3., 4., 2., 0.]])
+point_list = np_arr_to_point_list(np_arr1)
+np_arr2 = point_list_to_np_arr(point_list)
+assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
+```
+
+### Images
+```alpha
+```
+
+### Features
+```alpha
+```
 
 ```alpha
 # load image
