@@ -1,4 +1,4 @@
-**pycontour - Python contour toolkit**
+pycontour - Python contour toolkit
 ============
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7a79d543daca49f49d2c8e90bc9b14ce)](https://app.codacy.com/app/PingjunChen/pycontour?utm_source=github.com&utm_medium=referral&utm_content=PingjunChen/pycontour&utm_campaign=Badge_Grade_Dashboard)
 [![CircleCI](https://circleci.com/gh/PingjunChen/pycontour.svg?style=svg)](https://circleci.com/gh/PingjunChen/pycontour)
@@ -7,7 +7,6 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/PingjunChen)
 ![](https://img.shields.io/github/stars/PingjunChen/pycontour.svg)
 
-<!-- <img src="./docs/media/wsi-mucosa-tissue.png" width="800" height="320" alt="Banner"> -->
 <img src="./docs/media/contour_representation.png" width="800" height="270" alt="contour representation">
 
 Motivation
@@ -19,7 +18,7 @@ This package tries to standardize the contour representation in python. Differen
 Installation
 ------------
 To install pycontour, libgeos need to install in advance. Other required packages can refer to requirements.txt.
-```
+```bash
 $ sudo apt-get install libgeos-dev
 $ pip install shapely opencv-python skimage
 $ pip install pycontour==1.3.3
@@ -29,36 +28,22 @@ Usage example
 ------------
 
 ### Transformations
-```alpha
-# with OpenCV Representation
-
+```python
 import numpy as np
+# with OpenCV Representation
 from pycontour.cv2_transform import cv_cnt_to_np_arr, np_arr_to_cv_cnt
-
 np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 cv_cnt = np_arr_to_cv_cnt(np_arr1)
 np_arr2 = cv_cnt_to_np_arr(cv_cnt)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
-```
-
-```alpha
 # with Shapely Polygon
-
-import numpy as np
 from pycontour.poly_transform import np_arr_to_poly, poly_to_np_arr
-
 np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 poly = np_arr_to_poly(np_arr1)
 np_arr2 = poly_to_np_arr(poly)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
-```
-
-```alpha
 # with Point List
-
-import numpy as np
 from pycontour.coor_transform import point_list_to_np_arr, np_arr_to_point_list
-
 np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 point_list = np_arr_to_point_list(np_arr1)
 np_arr2 = point_list_to_np_arr(point_list)
@@ -66,7 +51,7 @@ assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equa
 ```
 
 ### Images
-```alpha
+```python
 import numpy as np
 from pycontour.img import build_cnt_mask
 
@@ -75,7 +60,7 @@ mask = build_cnt_mask(np_arr1)
 ```
 
 ### Features
-```alpha
+```python
 import numpy as np
 from pycontour.fea import ZernikeMoments
 
