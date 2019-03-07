@@ -6,12 +6,12 @@ __all__ = ["get_poly_area",
            "get_poly_hw"]
 
 
-def get_poly_area(poly):
+def get_poly_area(poly1):
     """ Calcualte the number of pixels the polygon covered.
 
     Parameters
     -------
-    poly : Polygon
+    poly1 : Polygon
         contour with shapely polygon format
 
     Returns
@@ -21,17 +21,17 @@ def get_poly_area(poly):
 
     """
 
-    area_val = poly.area
+    area_val = poly1.area
 
     return area_val
 
 
-def get_poly_bounds(poly):
+def get_poly_bounds(poly1):
     """ Find the bounds of the Polygon.
 
     Parameters
     -------
-    poly : Polygon
+    poly1 : Polygon
         contour with shapely polygon format
 
     Returns
@@ -47,14 +47,14 @@ def get_poly_bounds(poly):
 
     """
 
-    min_x, min_y, max_x, max_y = poly.bounds
+    min_x, min_y, max_x, max_y = poly1.bounds
     min_h, min_w = min_y, min_x
     max_h, max_w = max_y, max_x
 
     return min_h, min_w, max_h, max_w
 
 
-def get_poly_hw(poly):
+def get_poly_hw(poly1):
     """ Find height and width of the polygon.
 
     Parameters
@@ -71,7 +71,7 @@ def get_poly_hw(poly):
 
     """
 
-    min_h, min_w, max_h, max_w = get_poly_bounds(poly)
+    min_h, min_w, max_h, max_w = get_poly_bounds(poly1)
 
     poly_h = max_h - min_h + 1
     poly_w = max_w - min_w + 1

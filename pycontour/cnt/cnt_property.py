@@ -9,12 +9,12 @@ __all__ = ["get_cnt_area",
            "get_cnt_solidity"]
 
 
-def get_cnt_area(cnt):
+def get_cnt_area(cnt1):
     """ Calcualte the number of pixels contour covered.
 
     Parameters
     -------
-    cnt : np.array
+    cnt1 : np.array
         contour with opencv format
 
     Returns
@@ -24,17 +24,17 @@ def get_cnt_area(cnt):
 
     """
 
-    area_val = cv2.contourArea(cnt.astype(np.float32))
+    area_val = cv2.contourArea(cnt1.astype(np.float32))
 
     return area_val
 
 
-def get_cnt_aspect_ratio(cnt):
+def get_cnt_aspect_ratio(cnt1):
     """ Calcualte the aspect ratio of contour.
 
     Parameters
     -------
-    cnt : np.array
+    cnt1 : np.array
         contour with opencv format
 
     Returns
@@ -44,13 +44,13 @@ def get_cnt_aspect_ratio(cnt):
 
     """
 
-    _, _, w, h = cv2.boundingRect(cnt.astype(np.float32))
+    _, _, w, h = cv2.boundingRect(cnt1.astype(np.float32))
     aspect_ratio = w * 1.0 / h
 
     return aspect_ratio
 
 
-def get_cnt_solidity(cnt):
+def get_cnt_solidity(cnt1):
     """ Calcualte the solidity of contour.
 
     Parameters
@@ -65,9 +65,9 @@ def get_cnt_solidity(cnt):
 
     """
 
-    cnt = cnt.astype(np.float32)
-    area = cv2.contourArea(cnt)
-    hull = cv2.convexHull(cnt)
+    cnt1 = cnt1.astype(np.float32)
+    area = cv2.contourArea(cnt1)
+    hull = cv2.convexHull(cnt1)
     hull_area = cv2.contourArea(hull)
 
     solidity_val = area * 1.0 / hull_area
