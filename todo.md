@@ -6,4 +6,3 @@
     - [x] Pull Requests
 
 ### Functionality
-    - add contour rotate
