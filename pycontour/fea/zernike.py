@@ -6,8 +6,8 @@ from ..img import build_cnt_mask
 
 
 class ZernikeMoments:
-    """ Calculate Zernike moments for contour
-    
+    """ Calculate Zernike moments for contour.
+
     """
 
     def __init__(self, radius):
