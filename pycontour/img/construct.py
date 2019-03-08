@@ -42,7 +42,7 @@ def build_cnt_mask(np_arr, mask_size=None):
             raise AssertionError("given size too small")
         mask_height = mask_size
         mask_width = mask_size
-    elif type(mask_size) is list or type(mask_size) is tuple:
+    elif isinstance(mask_size, list) or isinstance(mask_size, tuple):
         if len(mask_size) == 1:
             if not (mask_size[0] >= cnt_height and mask_size[0] >= cnt_width):
                 raise AssertionError("given size too small")
