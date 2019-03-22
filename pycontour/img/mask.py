@@ -5,6 +5,8 @@ import cv2
 
 from ..cv2_transform import np_arr_to_cv_cnt
 
+__all__ = ["cnt_mask_img", ]
+
 def cnt_mask_img(img, np_arr):
     """ Mask image by contour
 

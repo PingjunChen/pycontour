@@ -18,3 +18,12 @@ def rotate_cnt(np_arr, angle):
     """ Rotate contour clockwise by radian angle around contour center
 
     """
+
+smooth_cnt
+--------
+::
+
+def smooth_cnt(np_arr, sigma=5):
+    """ Smooth the contour
+
+    """

@@ -8,6 +8,8 @@ from ..cv2_transform import np_arr_to_cv_cnt
 from ..poly import get_poly_bounds
 from ..transform import shift_cnt
 
+__all__ = ["build_cnt_mask", ]
+
 
 def build_cnt_mask(np_arr, mask_size=None):
     """ Build an exterior rectangle mask based on contour
@@ -30,7 +32,6 @@ def build_cnt_mask(np_arr, mask_size=None):
     min_h, min_w, max_h, max_w = get_poly_bounds(poly)
     min_h, min_w = int(min_h), int(min_w)
     max_h, max_w = int(max_h), int(max_w)
-
 
     cnt_height = max_h - min_h + 1
     cnt_width = max_w - min_w + 1

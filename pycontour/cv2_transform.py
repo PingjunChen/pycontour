@@ -4,7 +4,6 @@ import numpy as np
 
 from .coor_transform import swap_wh
 
-
 __all__ = ["cv_cnt_to_np_arr",
            "np_arr_to_cv_cnt"]
 
