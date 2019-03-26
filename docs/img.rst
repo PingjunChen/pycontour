@@ -18,3 +18,12 @@ def cnt_mask_img(img, np_arr):
     """ Mask image by contour
 
     """
+
+cnt_mask_sub_img
+--------
+::
+
+def cnt_mask_sub_img(img, np_arr):
+    """ Mask sub image using contour
+
+    """
