@@ -4,7 +4,7 @@ import os, sys
 
 __all__ = ["__version__"]
 
-__version__ = '1.3.5'
+__version__ = '1.3.6'
 
 from .coor_transform import *
 from .cv2_transform import *
