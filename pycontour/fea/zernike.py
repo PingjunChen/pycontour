@@ -2,7 +2,7 @@
 
 import mahotas
 
-from ..img import construct
+from ..img import build_cnt_mask
 
 __all__ = ["ZernikeMoments", ]
 
@@ -37,7 +37,7 @@ class ZernikeMoments:
 
         """
 
-        mask = construct.build_cnt_mask(np_arr)
+        mask = build_cnt_mask(np_arr)
         feas = mahotas.features.zernike_moments(mask, self.radius)
 
         return feas

@@ -12,7 +12,29 @@ PRJ_PATH = opd(TEST_PATH)
 sys.path.insert(0, PRJ_PATH)
 sys.path.insert(0, opj(PRJ_PATH, "pycontour"))
 
-from pycontour.img import cnt_mask_img, cnt_mask_sub_img
+from pycontour.cv2_transform import np_arr_to_cv_cnt
+from pycontour.cnt import get_cnt_area
+
+from pycontour.img import build_cnt_mask
+from pycontour.img import cnt_mask_img
+from pycontour.img import cnt_mask_sub_img
+
+def test_build_cnt_mask():
+    np_arr = np.array([[10, 40, 50, 40, 20], [10, 20, 30, 40, 30]])
+    # np_arr = np.array([[10, 25, 30, 10], [10, 15, 30, 30]])
+    mask = build_cnt_mask(np_arr)
+    # mask = build_cnt_mask(np_arr, mask_size=(100, 100))
+
+    # import matplotlib.pyplot as plt
+    # plt.imshow(mask)
+    # plt.show()
+    # import pdb; pdb.set_trace()
+
+    _ = np.count_nonzero(mask==255)
+    # calculate the contour area
+    cv_cnt = np_arr_to_cv_cnt(np_arr)
+    _ = get_cnt_area(cv_cnt)
+
 
 def test_cnt_mask_img():
     img_path = os.path.join(TEST_PATH, "data/Imgs/20181218042607.jpg")
