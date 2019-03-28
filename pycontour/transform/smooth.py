@@ -6,9 +6,10 @@ from skimage import filters
 from skimage import img_as_ubyte
 
 from ..cv2_transform import cv_cnt_to_np_arr
-from ..img import build_cnt_mask
+from ..img import mask
 
 __all__ = ["smooth_cnt", ]
+
 
 def smooth_cnt(np_arr, sigma=5):
     """ Smooth the contour.
@@ -31,8 +32,8 @@ def smooth_cnt(np_arr, sigma=5):
     np_arr[0] -= min_h
     np_arr[1] -= min_w
 
-    mask = build_cnt_mask(np_arr)
-    smooth_mask = filters.gaussian(mask, sigma=sigma)
+    cnt_mask = mask.build_cnt_mask(np_arr)
+    smooth_mask = filters.gaussian(cnt_mask, sigma=sigma)
     bin_mask = smooth_mask > 0.99
 
     _, cnts, _ = cv2.findContours(img_as_ubyte(bin_mask),

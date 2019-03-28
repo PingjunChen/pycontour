@@ -54,4 +54,4 @@ def test_cnt_mask_sub_img():
 
     import matplotlib.pylab as plt
     plt.imshow(masked_subimg)
-    plt.show()
+    # plt.show()
