@@ -64,7 +64,7 @@ def construct_intersection_polygon(np_arr1, np_arr2):
     poly2 = np_arr_to_poly(np_arr2)
 
     # Get convex_hull of polygon
-    poly1 = poly1.convex_hull  # Get convex hull of poly
+    poly1 = poly1.convex_hull
     poly2 = poly2.convex_hull
 
     inter_poly = poly1.intersection(poly2)
