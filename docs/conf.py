@@ -66,7 +66,7 @@ author = u'Pingjun Chen'
 # built documents.
 #
 # The short X.Y version.
-version = '1.3.6'
+version = '1.3'
 # The full version, including alpha/beta/rc tags.
 release = '1.3.6'
 
