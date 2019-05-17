@@ -4,8 +4,8 @@ pycontour - Python contour toolkit
 [![CircleCI](https://circleci.com/gh/PingjunChen/pycontour.svg?style=svg)](https://circleci.com/gh/PingjunChen/pycontour)
 [![Documentation Status](https://readthedocs.org/projects/pycontour/badge/?version=latest)](https://pycontour.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
-<!-- [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/PingjunChen) -->
 ![](https://img.shields.io/github/stars/PingjunChen/pycontour.svg)
+<!-- [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/PingjunChen) -->
 
 <img src="./docs/media/contour_representation.png" width="800" height="270" alt="contour representation">
 
