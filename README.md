@@ -1,4 +1,4 @@
-pycontour - Python contour toolkit
+pycontour - Contour python toolkit
 ============
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7a79d543daca49f49d2c8e90bc9b14ce)](https://app.codacy.com/app/PingjunChen/pycontour?utm_source=github.com&utm_medium=referral&utm_content=PingjunChen/pycontour&utm_campaign=Badge_Grade_Dashboard)
 [![CircleCI](https://circleci.com/gh/PingjunChen/pycontour.svg?style=svg)](https://circleci.com/gh/PingjunChen/pycontour)
