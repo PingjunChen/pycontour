@@ -26,7 +26,7 @@ pip install opencv-python==3.4.4.19
 pip install scikit-image==0.14.1
 pip install mahotas==1.4.5
 # install pycontour
-pip install pycontour==1.3.6
+pip install pycontour==1.3.7
 ```
 
 Usage example

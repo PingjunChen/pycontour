@@ -1,6 +1,15 @@
 Polygon
 ========
 
+poly_to_valid
+--------
+::
+
+def poly_to_valid(poly):
+    """ Adjust polygon to be valid if not.
+
+    """
+
 get_poly_area
 --------
 ::
