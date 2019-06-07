@@ -29,6 +29,23 @@ pip install mahotas==1.4.5
 pip install pycontour==1.3.7
 ```
 
+Functionalities
+------------
+
+* **Representation Transformation**
+    * back-and-forth transformation with cv2 representation
+    * back-and-forth transformation with shapely Polygon
+* **Contour Properties**
+    * area, aspect ratio, solidity, etc.
+* **Feature Extraction**
+    * ZernikeMoments feature extraction
+* **Contour Relationship**
+    * point with contour
+    * contour with contour
+* **Shape Transformation**
+    * rotate, shift, smooth, etc
+
+
 Usage example
 ------------
 
