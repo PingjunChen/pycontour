@@ -30,31 +30,13 @@ pip install mahotas==1.4.5
 pip install pycontour==1.4.0
 ```
 
-Functionalities
-------------
-
-* **Representation Transformation**
-    * back-and-forth transformation with cv2 representation
-    * back-and-forth transformation with shapely Polygon
-* **Contour Properties**
-    * area, aspect ratio, solidity, bounds, etc.
-* **Image Conversion**
-    * constructing binary image based on contour
-    * masking image based on contour
-* **Feature Extraction**
-    * ZernikeMoments feature extraction
-* **Contour Relationship**
-    * point with contour
-    * contour with contour
-    * overlapping ratio (Dice coefficient, Jaccard index, etc)
-* **Shape Transformation**
-    * rotate, shift, smooth, etc
-
-
-Usage example
+Functionalities & Usage Examples
 ------------
 
 ### Representation Transformation
+- back-and-forth transformation with cv2 representation
+- back-and-forth transformation with shapely Polygon
+
 ```python
 import numpy as np
 # with OpenCV Representation
@@ -77,7 +59,24 @@ np_arr2 = point_list_to_np_arr(point_list)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
 
-### Features Extraction
+### Contour Properties
+- area, aspect ratio, solidity, bounds, etc.
+
+### Image Conversion
+- constructing binary image based on contour
+- masking image based on contour    
+    
+```python
+import numpy as np
+from pycontour.img import build_cnt_mask
+
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
+mask = build_cnt_mask(np_arr1)
+```
+
+### Feature Extraction
+- ZernikeMoments feature extraction
+
 ```python
 import numpy as np
 from pycontour.fea import ZernikeMoments
@@ -88,14 +87,15 @@ cnt_fea = zernike_desc.cal_fea(np_arr1)
 assert len(cnt_fea) == 25, "Feature error"
 ```
 
-### Image Conversion
-```python
-import numpy as np
-from pycontour.img import build_cnt_mask
+### Contour Relationship
+- point with contour
+- contour with contour
+- overlapping ratio (Dice coefficient, Jaccard index, etc)
 
-np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
-mask = build_cnt_mask(np_arr1)
-```
+### Shape Transformation
+- rotate, shift, smooth, etc
+
+
 
 Documentation
 ------------
