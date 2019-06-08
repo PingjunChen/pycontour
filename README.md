@@ -36,12 +36,16 @@ Functionalities
     * back-and-forth transformation with cv2 representation
     * back-and-forth transformation with shapely Polygon
 * **Contour Properties**
-    * area, aspect ratio, solidity, etc.
+    * area, aspect ratio, solidity, bounds, etc.
+* **Image Conversion**
+    * constructing binary image based on contour
+    * masking image based on contour
 * **Feature Extraction**
     * ZernikeMoments feature extraction
 * **Contour Relationship**
     * point with contour
     * contour with contour
+    * overlapping ratio (Dice coefficient, Jaccard index, etc)
 * **Shape Transformation**
     * rotate, shift, smooth, etc
 
@@ -49,7 +53,7 @@ Functionalities
 Usage example
 ------------
 
-### Transformations
+### Representation Transformation
 ```python
 import numpy as np
 # with OpenCV Representation
@@ -72,16 +76,7 @@ np_arr2 = point_list_to_np_arr(point_list)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
 
-### Images
-```python
-import numpy as np
-from pycontour.img import build_cnt_mask
-
-np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
-mask = build_cnt_mask(np_arr1)
-```
-
-### Features
+### Features Extraction
 ```python
 import numpy as np
 from pycontour.fea import ZernikeMoments
@@ -90,6 +85,15 @@ np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 zernike_desc = ZernikeMoments(radius=21)
 cnt_fea = zernike_desc.cal_fea(np_arr1)
 assert len(cnt_fea) == 25, "Feature error"
+```
+
+### Image Conversion
+```python
+import numpy as np
+from pycontour.img import build_cnt_mask
+
+np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
+mask = build_cnt_mask(np_arr1)
 ```
 
 Documentation
