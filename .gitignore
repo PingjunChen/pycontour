@@ -17,6 +17,9 @@ eggs/
 *.egg-info/
 *.egg
 
+# coverage reports
+.coverage
+coverage.xml
 
 # Jupyter Notebook
 .ipynb_checkpoints
