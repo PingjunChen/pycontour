@@ -4,7 +4,7 @@ import os, sys
 
 __all__ = ["__version__"]
 
-__version__ = '1.3.7'
+__version__ = '1.4.0'
 
 from . import cnt
 from . import fea
