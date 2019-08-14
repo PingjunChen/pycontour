@@ -5,6 +5,7 @@ pycontour - Contour python toolkit
 [![Documentation Status](https://readthedocs.org/projects/pycontour/badge/?version=latest)](https://pycontour.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/pycontour.svg)](https://badge.fury.io/py/pycontour)
 [![codecov](https://codecov.io/gh/PingjunChen/pycontour/branch/master/graph/badge.svg)](https://codecov.io/gh/PingjunChen/pycontour)
+[![Downloads](https://pepy.tech/badge/pycontour)](https://pepy.tech/project/pycontour)
 ![](https://img.shields.io/github/stars/PingjunChen/pycontour.svg)
 <!-- [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/PingjunChen) -->
 
