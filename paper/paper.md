@@ -1,5 +1,5 @@
 ---
-title: 'pycontour: A Python package for contour representation and functionalities'
+title: 'pycontour: A Python-Based Toolkit for Contour Representation and Functionalities'
 tags:
   - contour
   - boundary
