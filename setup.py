@@ -10,7 +10,7 @@ DESCRIPTION = "Python contour toolkit"
 HOMEPAGE = "https://github.com/PingjunChen/pycontour"
 LICENSE = "MIT"
 AUTHOR_NAME = "Pingjun Chen"
-AUTHOR_EMAIL = "chenpingjun@gmx.com"
+AUTHOR_EMAIL = "pingjunchen@ieee.org"
 
 REQS = ""
 with open('requirements.txt') as f:
@@ -24,7 +24,7 @@ CLASSIFIERS = [
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.8',
     'Topic :: Scientific/Engineering',
 ]
 
