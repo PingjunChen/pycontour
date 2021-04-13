@@ -23,12 +23,9 @@ To install pycontour, libgeos need to install in advance. Other required package
 ```bash
 sudo apt-get install libgeos-dev
 # install relied packages
-pip install shapely==1.6.4
-pip install opencv-python==3.4.4.19
-pip install scikit-image==0.14.1
-pip install mahotas==1.4.5
+pip install -r requirements.txt
 # install pycontour
-pip install pycontour==1.4.0
+pip install pycontour==1.5.0
 ```
 
 Functionalities & Usage Examples
@@ -66,7 +63,7 @@ assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equa
 ### Image Conversion
 - constructing binary image based on contour
 - masking image based on contour    
-    
+
 ```python
 import numpy as np
 from pycontour.img import build_cnt_mask
