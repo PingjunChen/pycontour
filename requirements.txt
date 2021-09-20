@@ -1,5 +1,5 @@
 numpy>=1.16.0
-scikit-image>=0.18.0
-opencv-python>=4.5.1.48
-shapely>=1.7.0
-mahotas>=1.4.10
+scikit-image>=0.14.5
+opencv-python>=4.1.0.25
+shapely>=1.6.4
+mahotas>=1.4.8
