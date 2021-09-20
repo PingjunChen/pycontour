@@ -1,4 +1,4 @@
-numpy>=1.21.0
+numpy>=1.16.0
 scikit-image>=0.18.0
 opencv-python>=4.5.1.48
 shapely>=1.7.0
