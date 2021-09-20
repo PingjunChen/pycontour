@@ -22,7 +22,6 @@ CLASSIFIERS = [
     'Intended Audience :: Healthcare Industry',
     'Intended Audience :: Science/Research',
     'License :: OSI Approved :: BSD 3-Clause "New" or "Revised" License',
-    'Programming Language :: Python',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.8',
     'Topic :: Scientific/Engineering',
