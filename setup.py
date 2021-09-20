@@ -6,9 +6,9 @@ import pycontour
 
 PKG_NAME = "pycontour"
 VERSION = pycontour.__version__
-DESCRIPTION = "Python contour toolkit"
+DESCRIPTION = "pycontour: A Python Toolkit for 2D Contour Processing"
 HOMEPAGE = "https://github.com/PingjunChen/pycontour"
-LICENSE = "MIT"
+LICENSE = "BSD 3-Clause"
 AUTHOR_NAME = "Pingjun Chen"
 AUTHOR_EMAIL = "pingjunchen@ieee.org"
 
@@ -21,7 +21,7 @@ CLASSIFIERS = [
     'Intended Audience :: Developers',
     'Intended Audience :: Healthcare Industry',
     'Intended Audience :: Science/Research',
-    'License :: OSI Approved :: MIT License',
+    'License :: OSI Approved :: BSD 3-Clause "New" or "Revised" License',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.8',
