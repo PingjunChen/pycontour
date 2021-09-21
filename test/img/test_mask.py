@@ -28,7 +28,6 @@ def test_build_cnt_mask():
     # import matplotlib.pyplot as plt
     # plt.imshow(mask)
     # plt.show()
-    # import pdb; pdb.set_trace()
 
     _ = np.count_nonzero(mask==255)
     # calculate the contour area

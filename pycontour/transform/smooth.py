@@ -36,9 +36,9 @@ def smooth_cnt(np_arr, sigma=5):
     smooth_mask = filters.gaussian(cnt_mask, sigma=sigma)
     bin_mask = smooth_mask > 0.99
 
-    _, cnts, _ = cv2.findContours(img_as_ubyte(bin_mask),
-                                  mode=cv2.RETR_EXTERNAL,
-                                  method=cv2.CHAIN_APPROX_NONE)
+    cnts, _ = cv2.findContours(img_as_ubyte(bin_mask),
+                               mode=cv2.RETR_EXTERNAL,
+                               method=cv2.CHAIN_APPROX_NONE)
     if len(cnts) != 1:
         raise AssertionError("Contour number error...")
 
