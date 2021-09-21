@@ -24,6 +24,8 @@ To install pycontour, libgeos need to install in advance. Other required package
 ```bash
 # install dependencies
 sudo apt-get install libgeos-dev
+# install relied packages
+pip install -r requirements.txt
 # install pycontour
 pip install pycontour==1.5.1
 ```
