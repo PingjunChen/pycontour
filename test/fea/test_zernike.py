@@ -27,14 +27,14 @@ def extract_cnt_using_cv2(img_path):
     fill = binary_fill_holes(no_small)
     mask = morphology.binary_closing(fill, morphology.disk(10))
     ubyte_mask = img_as_ubyte(mask)
-    _, cnts, _ = cv2.findContours(ubyte_mask, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_NONE)
+    cnts, _ = cv2.findContours(ubyte_mask, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_NONE)
 
     return cnts
 
 def test_ZernikeMoments():
     img_path = os.path.join(TEST_PATH, "data/Imgs/20181218042607.jpg")
     cnts = extract_cnt_using_cv2(img_path)
-    test_cnt = cnts[1]
+    test_cnt = cnts[0]
 
     # convert cv2 contour to numpy array
     np_arr = cv_cnt_to_np_arr(test_cnt)

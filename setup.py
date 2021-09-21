@@ -14,13 +14,13 @@ AUTHOR_EMAIL = "pingjunchen@ieee.org"
 
 REQS = ""
 with open('requirements.txt') as f:
-    REQS = [pkg.replace("==", ">=") for pkg in f.read().splitlines()]
+    REQS = [pkg for pkg in f.read().splitlines()]
 
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers',
-    'Intended Audience :: Healthcare Industry',
     'Intended Audience :: Science/Research',
+    'Intended Audience :: Healthcare Industry',
     'License :: OSI Approved :: BSD 3-Clause "New" or "Revised" License',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.8',

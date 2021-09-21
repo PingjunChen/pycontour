@@ -26,7 +26,7 @@ def extract_cnt_using_cv2(img_path):
     selem = disk(10)
     mask = binary_closing(fill, selem)
     ubyte_mask = img_as_ubyte(mask)
-    _, cnts, _ = cv2.findContours(ubyte_mask, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_NONE)
+    cnts, _ = cv2.findContours(ubyte_mask, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_NONE)
 
     return cnts
 
@@ -34,10 +34,11 @@ def extract_cnt_using_cv2(img_path):
 def test_cv_np_transfom():
     img_path = os.path.join(TEST_PATH, "data/Imgs/20181218042607.jpg")
     cnts = extract_cnt_using_cv2(img_path)
-    test_cnt = cnts[1]
+    test_cnt = cnts[0]
     # convert cv2 contour to numpy array
     np_arr = cv_cnt_to_np_arr(test_cnt)
     # convert numpy arrary to cv2 contour
     cv_cnt = np_arr_to_cv_cnt(np_arr)
+
     if not np.array_equal(test_cnt, cv_cnt):
         raise AssertionError("Conversion back and forth error")

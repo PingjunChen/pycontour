@@ -10,30 +10,31 @@ pycontour: A Python Toolkit for 2D Contour Processing
 
 <img src="./docs/media/contour_representation.png" width="800" height="270" alt="Contour Representation">
 
+
 Motivation
 ------------
 Contour is one of the most important concept in plenty of image-based applications, mainly for the representation of region of interest (ROI), especially in medical imaging applications. [OpenCV](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) and [shapely](http://shapely.readthedocs.io/en/stable/manual.html) both provide some contour functionalities. However, the contour representation looks obscure and strange for developers.
 
 This package tries to standardize the contour representation in python. Different from OpenCV, the contour here is represented as a numpy 2d array with shape 2*N (0-h 1-w), in which height always comes first, shown as the figure above. We believe this representation is the most intuitive way for developers to understand and use. Moreover, back and forth conversion between this representation with OpenCV or shapely are supported, enabling developers to take advantage of the functionalities of both OpenCV and shapely. We also add contour utilities, such as feature extraction, statistic metric calculation, shifting and rotation, mask construction, etc. to simplify contour usage. If you find [pycontour](https://github.com/PingjunChen/pycontour) to be helpful for your work, please `star` this repo.
 
+
 Installation
 ------------
 To install pycontour, libgeos need to install in advance. Other required packages can refer to requirements.txt.
 ```bash
+# install dependencies
 sudo apt-get install libgeos-dev
-# install relied packages
-pip install -r requirements.txt
 # install pycontour
-pip install pycontour==1.5.0
+pip install pycontour==1.5.1
 ```
+
 
 Functionalities & Usage Examples
 ------------
-
-### Representation Transformation
+<pre><code>
+# Representation Transformation
 - back-and-forth transformation with cv2 representation
 - back-and-forth transformation with shapely Polygon
-
 ```python
 import numpy as np
 # with OpenCV Representation
@@ -56,42 +57,38 @@ np_arr2 = point_list_to_np_arr(point_list)
 assert np.array_equal(np_arr1, np_arr2), "Back and forth transformation not equal"
 ```
 
-### Contour Properties
+# Contour Features
 - area, aspect ratio, solidity, bounds, etc.
 
-### Image Conversion
+# Interconversion of Contour and Image
 - constructing binary image based on contour
 - masking image based on contour    
-
 ```python
 import numpy as np
 from pycontour.img import build_cnt_mask
-
 np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 mask = build_cnt_mask(np_arr1)
 ```
 
-### Feature Extraction
+# Feature Extraction
 - ZernikeMoments feature extraction
-
 ```python
 import numpy as np
 from pycontour.fea import ZernikeMoments
-
 np_arr1 = np.array([[1, 0, 2, 3, 5, 4], [0, 2, 4, 3, 1, 0]])
 zernike_desc = ZernikeMoments(radius=21)
 cnt_fea = zernike_desc.cal_fea(np_arr1)
 assert len(cnt_fea) == 25, "Feature error"
 ```
 
-### Contour Relationship
+# Contour Relationship
 - point with contour
 - contour with contour
-- overlapping ratio (Dice coefficient, Jaccard index, etc)
+- overlapping ratio (Dice coefficient, Jaccard index, etc.)
 
-### Shape Transformation
-- rotate, shift, smooth, etc
-
+# Shape Transformation
+- rotate, shift, smooth, etc.
+</code></pre>
 
 
 Documentation
@@ -99,14 +96,17 @@ Documentation
 Hosted in [https://pycontour.readthedocs.io](https://pycontour.readthedocs.io), powered by [readthedocs](https://readthedocs.org) and
 [Sphinx](http://www.sphinx-doc.org).
 
+
 Contributing
 ------------
-``pycontour`` is an open source project and anyone is welcome to contribute. An easy way to get started is by suggesting a new enhancement on the [Issues](https://github.com/PingjunChen/pycontour/issues). If you have found a bug, then either report this through [Issues](https://github.com/PingjunChen/pycontour/issues), or even better, make a fork of the repository, fix the bug and then create a [Pull Request](https://github.com/PingjunChen/pycontour/pulls) to get the fix into the master branch.
+``pycontour`` is an open source project and anyone is welcome to contribute. An easy way to get started is by suggesting a new enhancement on the [Issues](https://github.com/PingjunChen/pycontour/issues). If you have found a bug, then either report this through [Issues](https://github.com/PingjunChen/pycontour/issues), or even better, fork the repository, fix the bug and then create a [Pull Request](https://github.com/PingjunChen/pycontour/pulls).
+
 
 Contributors
 ------------
 See the [AUTHORS.md](AUTHORS.md) file for a complete list of contributors to the project.
 
+
 License
 ------------
-``pycontour`` is free software made available under the MIT License. For details see the [LICENSE](LICENSE) file.
+``pycontour`` is free software made available under the BSD 3-Clause License. For details see the [LICENSE](LICENSE) file.
