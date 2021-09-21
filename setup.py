@@ -19,12 +19,16 @@ with open('requirements.txt') as f:
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers',
+    'Intended Audience :: Healthcare Industry',    
+    'Intended Audience :: Information Technology',
     'Intended Audience :: Science/Research',
-    'Intended Audience :: Healthcare Industry',
-    'License :: OSI Approved :: BSD 3-Clause "New" or "Revised" License',
+    'License :: OSI Approved :: BSD License',
     'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Mathematics',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
 ]
 
 args = dict(
